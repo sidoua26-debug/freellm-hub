@@ -9,6 +9,7 @@ Scope & Safety:
 - Excludes all paid-only providers and paid pricing tiers
 - Preserves free-tier classification: "permanent" vs "renewable"
 - Extracts models, context windows, rate limits, and authentication criteria
+- Dynamically detects anonymous / no-key access without hardcoded provider overrides
 - Outputs structured data.json
 """
 
@@ -50,7 +51,7 @@ def parse_markdown_table(table_text: str):
         if len(cols) == len(headers):
             rows.append(dict(zip(headers, cols)))
         elif len(cols) > len(headers):
-            # If extra pipes inside cells (e.g. arrows), join overflow into last cell
+            # If extra pipes inside cells, join overflow into last cell
             merged = cols[:len(headers)-1] + ["|".join(cols[len(headers)-1:])]
             rows.append(dict(zip(headers, merged)))
     return headers, rows
@@ -107,6 +108,16 @@ def infer_model_modalities(model_name: str, model_id: str, provider_modalities: 
         mods.add("text")
 
     return sorted(list(mods))
+
+def check_anonymous_access(cc_info: str, key_url: str, rate_limits: list) -> bool:
+    """
+    Generic detection: checks if any column or rate limit string contains
+    markers indicating anonymous, unauthenticated, or no-key access.
+    Zero hardcoded provider names.
+    """
+    corpus = " ".join([cc_info or "", key_url or ""] + rate_limits).lower()
+    pattern = r'\b(anon|anonymous|no\s*(?:key|signup|auth|account)|unauthenticated|public)\b'
+    return bool(re.search(pattern, corpus))
 
 def parse_freellm_readme(md_content: str):
     """
@@ -185,45 +196,11 @@ def parse_freellm_readme(md_content: str):
         if not cc_info and quick_info.get("Credit Card?"):
             cc_info = quick_info.get("Credit Card?", "").strip()
 
-        # Build Provider Object
-        p_obj = {
-            "id": generate_slug(prov_name),
-            "name": prov_name,
-            "tier_type": "permanent",
-            "tier_label": "Always Free",
-            "credit_model": None,
-            "base_url": base_url,
-            "signup_required": True,
-            "api_key_required": True,
-            "credit_card_required": False,
-            "verification_type": cc_info if cc_info else "Email registration",
-            "docs_url": key_url,
-            "signup_url": key_url,
-            "total_free_models": free_models_count,
-            "max_context": max_context,
-            "modalities": modalities,
-            "free_quota": "See provider details",
-            "models": []
-        }
-
-        # Check for anonymous access providers
-        if prov_name == "LLM7.io":
-            p_obj["signup_required"] = False
-            p_obj["api_key_required"] = False
-            p_obj["verification_type"] = "None (anonymous access available)"
-            p_obj["free_quota"] = "10 RPM, 60 req/hr (anonymous); higher with free key"
-        elif prov_name == "OVHcloud AI Endpoints":
-            p_obj["signup_required"] = False
-            p_obj["api_key_required"] = False
-            p_obj["verification_type"] = "None (anonymous access available)"
-            p_obj["free_quota"] = "2 RPM (anonymous)"
-        elif cc_info.lower() == "no":
-            p_obj["verification_type"] = "Email only (no credit card)"
-        elif "phone" in cc_info.lower():
-            p_obj["verification_type"] = "Phone verification"
-
-        # Populate Best Models for this provider
+        # Gather model details first so we can inspect rate limits for generic anonymous detection
         models_for_prov = best_by_prov.get(prov_name, [])
+        parsed_models = []
+        model_rate_limits = []
+
         for m_row in models_for_prov:
             m_url, m_name = extract_link(m_row.get("Best Free Model", ""))
             if not m_name:
@@ -231,6 +208,9 @@ def parse_freellm_readme(md_content: str):
             m_id = clean_code(m_row.get("Model ID", ""))
             m_ctx = m_row.get("Max Context", "").strip()
             m_rate = m_row.get("Rate Limit", "").strip()
+
+            if m_rate:
+                model_rate_limits.append(m_rate)
 
             m_obj = {
                 "name": m_name,
@@ -240,12 +220,52 @@ def parse_freellm_readme(md_content: str):
                 "info_url": m_url,
                 "modalities": infer_model_modalities(m_name, m_id, modalities)
             }
-            p_obj["models"].append(m_obj)
+            parsed_models.append(m_obj)
 
-        if p_obj["models"]:
-            rates = [m["rate_limit"] for m in p_obj["models"] if m["rate_limit"] and m["rate_limit"].lower() != "see provider"]
-            if rates and p_obj["free_quota"] == "See provider details":
-                p_obj["free_quota"] = rates[0]
+        # Generic detection of anonymous / unauthenticated access (NO HARDCODED NAMES)
+        is_anonymous = check_anonymous_access(cc_info, key_url, model_rate_limits)
+
+        if is_anonymous:
+            signup_req = False
+            api_key_req = False
+            verification_str = "None (anonymous access available)"
+        else:
+            signup_req = True
+            api_key_req = True
+            if "phone" in cc_info.lower():
+                verification_str = "Phone verification"
+            elif cc_info.lower() == "no":
+                verification_str = "Email only (no credit card)"
+            elif "registration" in cc_info.lower():
+                verification_str = "Free registration required"
+            else:
+                verification_str = cc_info if cc_info else "Email registration"
+
+        # Determine representative quota string
+        free_quota_str = "See provider details"
+        valid_rates = [r for r in model_rate_limits if r.lower() != "see provider"]
+        if valid_rates:
+            free_quota_str = valid_rates[0]
+
+        p_obj = {
+            "id": generate_slug(prov_name),
+            "name": prov_name,
+            "tier_type": "permanent",
+            "tier_label": "Always Free",
+            "credit_model": None,
+            "base_url": base_url,
+            "signup_required": signup_req,
+            "api_key_required": api_key_req,
+            "credit_card_required": False,
+            "verification_type": verification_str,
+            "docs_url": key_url,
+            "signup_url": key_url,
+            "total_free_models": free_models_count,
+            "max_context": max_context,
+            "modalities": modalities,
+            "free_quota": free_quota_str,
+            "models": parsed_models
+        }
 
         providers.append(p_obj)
 
@@ -277,27 +297,10 @@ def parse_freellm_readme(md_content: str):
         if not key_url and quick_key_url:
             key_url = quick_key_url
 
-        p_obj = {
-            "id": generate_slug(prov_name),
-            "name": prov_name,
-            "tier_type": "renewable",
-            "tier_label": "Free Credits (Renews periodically)",
-            "credit_model": credit_model,
-            "base_url": base_url,
-            "signup_required": True,
-            "api_key_required": True,
-            "credit_card_required": False,
-            "verification_type": "Registration (Free Tier)",
-            "docs_url": key_url,
-            "signup_url": key_url,
-            "total_free_models": free_models_count,
-            "max_context": max_context,
-            "modalities": modalities,
-            "free_quota": credit_model or "Periodic free credits",
-            "models": []
-        }
-
         models_for_prov = best_by_prov.get(prov_name, [])
+        parsed_models = []
+        model_rate_limits = []
+
         for m_row in models_for_prov:
             m_url, m_name = extract_link(m_row.get("Best Free Model", ""))
             if not m_name:
@@ -305,6 +308,9 @@ def parse_freellm_readme(md_content: str):
             m_id = clean_code(m_row.get("Model ID", ""))
             m_ctx = m_row.get("Max Context", "").strip()
             m_rate = m_row.get("Rate Limit", "").strip()
+
+            if m_rate:
+                model_rate_limits.append(m_rate)
 
             m_obj = {
                 "name": m_name,
@@ -314,7 +320,29 @@ def parse_freellm_readme(md_content: str):
                 "info_url": m_url,
                 "modalities": infer_model_modalities(m_name, m_id, modalities)
             }
-            p_obj["models"].append(m_obj)
+            parsed_models.append(m_obj)
+
+        is_anonymous = check_anonymous_access(credit_model, key_url, model_rate_limits)
+
+        p_obj = {
+            "id": generate_slug(prov_name),
+            "name": prov_name,
+            "tier_type": "renewable",
+            "tier_label": "Free Credits (Renews periodically)",
+            "credit_model": credit_model,
+            "base_url": base_url,
+            "signup_required": not is_anonymous,
+            "api_key_required": not is_anonymous,
+            "credit_card_required": False,
+            "verification_type": "Registration (Free Tier)" if not is_anonymous else "None (anonymous access available)",
+            "docs_url": key_url,
+            "signup_url": key_url,
+            "total_free_models": free_models_count,
+            "max_context": max_context,
+            "modalities": modalities,
+            "free_quota": credit_model or "Periodic free credits",
+            "models": parsed_models
+        }
 
         providers.append(p_obj)
 
