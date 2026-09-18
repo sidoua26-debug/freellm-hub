@@ -1,0 +1,45 @@
+name: Auto-update Free LLM API Data
+
+# Daily cron schedule + manual trigger
+on:
+  schedule:
+    # Runs everyday at 06:00 UTC
+    - cron: '0 6 * * *'
+  workflow_dispatch:
+
+# Use built-in GITHUB_TOKEN with write permission (no manual PAT secret needed)
+permissions:
+  contents: write
+
+jobs:
+  update-data:
+    name: Sync & Update data.json
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Run parser against upstream repository
+        run: |
+          python scripts/parse_data.py
+
+      - name: Commit and push changes if data.json changed
+        run: |
+          git status
+          if ! git diff --quiet data.json; then
+            echo "Detected updates in data.json. Committing and pushing..."
+            git config user.name "github-actions[bot]"
+            git config user.email "github-actions[bot]@users.noreply.github.com"
+            git add data.json
+            git commit -m "chore(data): auto-update free LLM API directory [skip ci]"
+            git push
+            echo "Changes pushed. Hosting platform (GitHub Pages / Vercel / Netlify) will auto-deploy."
+          else
+            echo "data.json is already up-to-date. No changes to commit."
+          fi

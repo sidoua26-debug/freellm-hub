@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FreeLLM Hub — Free LLM API Directory</title>
+  <meta name="description" content="Discover, compare, and connect to free-tier LLM APIs. Search rates, context windows, and instant OpenAI-compatible configs.">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚡</text></svg>">
+</head>
+<body>
+
+  <!-- Site Header -->
+  <header class="site-header">
+    <div class="container">
+      <div class="header-inner">
+        <a href="#" class="brand">
+          <div class="brand-icon">⚡</div>
+          <div class="brand-text">
+            <h1>FreeLLM Hub</h1>
+            <p>Free-Tier LLM API Directory</p>
+          </div>
+        </a>
+        <div class="header-links">
+          <a href="https://github.com/open-free-llm-api/awesome-freellm-apis" target="_blank" rel="noopener" class="btn-header">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+            Upstream Repo
+          </a>
+          <button id="btnQuickGuide" class="btn-header">
+            <span>🚀</span> Quick Start
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <!-- Hero Section -->
+    <section class="hero">
+      <h2 class="hero-title">Free-Tier LLM APIs, Curated & Verified</h2>
+      <p class="hero-subtitle">
+        Zero cost, no credit card required for permanent tiers. Fast-loading, machine-readable directory with verified rate limits, context windows, and OpenAI-compatible drop-in endpoints.
+      </p>
+
+      <!-- Stat Cards -->
+      <div class="stats-grid" id="statsGrid">
+        <div class="stat-card">
+          <div class="stat-label">Providers</div>
+          <div class="stat-val" id="statProviders">--</div>
+          <div class="stat-hint">Active API platforms</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-label">Always Free</div>
+          <div class="stat-val" id="statPermanent">--</div>
+          <div class="stat-hint">Permanent free tiers</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-label">Renewable Credits</div>
+          <div class="stat-val" id="statRenewable">--</div>
+          <div class="stat-hint">Monthly / periodic reset</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-label">Featured Models</div>
+          <div class="stat-val" id="statModels">--</div>
+          <div class="stat-hint">Benchmarked models</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-label">Catalog Total</div>
+          <div class="stat-val" id="statCatalog">--</div>
+          <div class="stat-hint">Total free model IDs</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Controls & Filter Toolbar -->
+    <section class="controls-panel">
+      <div class="search-row">
+        <div class="search-box">
+          <span class="search-icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+          </span>
+          <input type="text" id="searchInput" class="search-input" placeholder="Search by provider, model name (e.g. Llama, Gemini, Qwen), or model ID..." autocomplete="off">
+          <span class="search-kbd">/</span>
+        </div>
+
+        <div class="view-toggle">
+          <button id="btnViewCards" class="view-btn active" title="Cards Grid View">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect></svg>
+            Cards
+          </button>
+          <button id="btnViewTable" class="view-btn" title="Compact Table View">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="8" y1="6" x2="21" y2="6"></line><line x1="8" y1="12" x2="21" y2="12"></line><line x1="8" y1="18" x2="21" y2="18"></line><line x1="3" y1="6" x2="3.01" y2="6"></line><line x1="3" y1="12" x2="3.01" y2="12"></line><line x1="3" y1="18" x2="3.01" y2="18"></line></svg>
+            Table
+          </button>
+        </div>
+      </div>
+
+      <div class="filter-sections">
+        <!-- Tier Type Filter -->
+        <div class="filter-group">
+          <span class="filter-label">Tier Type</span>
+          <div class="pill-group" id="tierFilterGroup">
+            <button class="pill-btn active" data-tier="all">All Tiers</button>
+            <button class="pill-btn pill-perm" data-tier="permanent">🟢 Always Free</button>
+            <button class="pill-btn pill-renew" data-tier="renewable">🔄 Renewable Credits</button>
+          </div>
+        </div>
+
+        <!-- Modality Filter -->
+        <div class="filter-group">
+          <span class="filter-label">Modality</span>
+          <div class="pill-group" id="modalityFilterGroup">
+            <button class="pill-btn active" data-modality="all">All</button>
+            <button class="pill-btn" data-modality="chat">💬 Chat & Text</button>
+            <button class="pill-btn" data-modality="vision">👁️ Vision</button>
+            <button class="pill-btn" data-modality="reasoning">⚡ Reasoning</button>
+            <button class="pill-btn" data-modality="code">💻 Code</button>
+            <button class="pill-btn" data-modality="embeddings">📐 Embeddings</button>
+            <button class="pill-btn" data-modality="audio">🎙️ Audio</button>
+          </div>
+        </div>
+
+        <!-- Auth / Requirements Filter -->
+        <div class="filter-group">
+          <span class="filter-label">Auth & Key</span>
+          <div class="pill-group" id="authFilterGroup">
+            <button class="pill-btn active" data-auth="all">All Access</button>
+            <button class="pill-btn" data-auth="no-key">🔓 No Key Needed (Anonymous)</button>
+            <button class="pill-btn" data-auth="email-only">✉️ Email Only (No Card)</button>
+            <button class="pill-btn" data-auth="no-card">💳 100% No Card Required</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Results Status Bar -->
+    <div class="results-summary-row">
+      <div id="resultsCount">Loading providers...</div>
+      <button id="btnResetFilters" class="btn-reset-filters" style="display: none;">Reset all filters</button>
+    </div>
+
+    <!-- Cards Grid View -->
+    <div id="cardsView" class="cards-grid"></div>
+
+    <!-- Table View (Hidden by default) -->
+    <div id="tableView" class="table-container" style="display: none;">
+      <table class="providers-table">
+        <thead>
+          <tr>
+            <th>Provider</th>
+            <th>Tier & Quota</th>
+            <th>Auth / Verification</th>
+            <th>Featured Models</th>
+            <th>Base URL</th>
+            <th>Modalities</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody id="tableBody"></tbody>
+      </table>
+    </div>
+
+    <!-- Empty State -->
+    <div id="emptyState" class="empty-state" style="display: none;">
+      <h3>No free providers found matching your criteria</h3>
+      <p>Try searching for a different provider, model name, or clear the active filters.</p>
+      <button id="btnEmptyReset" class="btn-action-primary">Clear all filters</button>
+    </div>
+  </main>
+
+  <!-- Code Snippet Drawer / Modal -->
+  <div id="snippetModal" class="drawer-backdrop">
+    <div class="drawer-panel">
+      <div class="drawer-header">
+        <h3 class="drawer-title" id="snippetModalTitle">Provider Code Config</h3>
+        <button id="btnCloseSnippet" class="btn-close-drawer">&times;</button>
+      </div>
+      <div class="drawer-body">
+        <div id="snippetProviderMeta" style="font-size: 0.85rem; color: var(--text-secondary);"></div>
+        <div class="snippet-tabs">
+          <button class="snippet-tab-btn active" data-lang="python">Python (OpenAI SDK)</button>
+          <button class="snippet-tab-btn" data-lang="curl">cURL (Bash)</button>
+          <button class="snippet-tab-btn" data-lang="js">JavaScript (Node / Browser)</button>
+        </div>
+        <div class="snippet-code-box">
+          <button id="btnCopySnippet" class="btn-copy-code">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+            <span>Copy Snippet</span>
+          </button>
+          <pre id="snippetCode" class="snippet-pre"></pre>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Quick Guide Drawer / Modal -->
+  <div id="guideModal" class="drawer-backdrop">
+    <div class="drawer-panel">
+      <div class="drawer-header">
+        <h3 class="drawer-title">🚀 30-Second Quick Start</h3>
+        <button id="btnCloseGuide" class="btn-close-drawer">&times;</button>
+      </div>
+      <div class="drawer-body">
+        <p style="color: var(--text-secondary); font-size: 0.9rem;">
+          All providers listed in FreeLLM Hub expose an <strong>OpenAI-compatible endpoint</strong>. Swap the <code>base_url</code>, paste your API key, and you're good to go!
+        </p>
+
+        <div style="background: var(--bg-input); border: 1px solid var(--border-subtle); border-radius: var(--radius-md); padding: 1rem;">
+          <h4 style="color: #38bdf8; font-size: 0.95rem; margin-bottom: 0.5rem;">Fastest route to testing:</h4>
+          <ol style="margin-left: 1.25rem; font-size: 0.85rem; color: var(--text-secondary); display: flex; flex-direction: column; gap: 0.4rem;">
+            <li><strong>Anonymous test (0 seconds signup)</strong>: Use <code>LLM7.io</code> or <code>OVHcloud</code> directly with any dummy key.</li>
+            <li><strong>Generous cloud tier (30 seconds)</strong>: Grab a free key from <code>Groq</code> (Email only, 30 RPM) or <code>Google Gemini</code> (AI Studio).</li>
+            <li><strong>Local / offline</strong>: Run <code>ollama run llama3</code> on your own machine.</li>
+          </ol>
+        </div>
+
+        <div class="snippet-code-box">
+          <pre class="snippet-pre">
+# Universal OpenAI SDK Pattern
+from openai import OpenAI
+
+client = OpenAI(
+    base_url="https://api.groq.com/openai/v1", # Provider Base URL
+    api_key="your-api-key"                    # From Provider Console
+)
+
+response = client.chat.completions.create(
+    model="llama-3.3-70b-versatile",
+    messages=[{"role": "user", "content": "Hello world!"}]
+)
+print(response.choices[0].message.content)
+          </pre>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-inner">
+        <div>
+          <p><strong>FreeLLM Hub</strong> — 100% Static & Open Source Free LLM API Directory.</p>
+          <p style="margin-top: 0.25rem; font-size: 0.8rem; color: var(--text-muted);">
+            Data auto-refreshed daily from <a href="https://github.com/open-free-llm-api/awesome-freellm-apis" target="_blank" rel="noopener" style="color: #38bdf8;">awesome-freellm-apis</a>. Zero backend, zero tracking, no ads.
+          </p>
+        </div>
+        <div class="footer-links">
+          <a href="https://github.com/open-free-llm-api/awesome-freellm-apis" target="_blank" rel="noopener">Upstream Repo</a>
+          <a href="data.json" target="_blank" download="data.json">Raw data.json</a>
+          <a href="#top">Back to top ↑</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/app.js"></script>
+</body>
+</html>
