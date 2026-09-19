@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-18T14:25:15.630658+00:00",
+  "updated_at": "2026-09-19T06:05:20.303859+00:00",
   "source_repo": "open-free-llm-api/awesome-freellm-apis",
   "stats": {
     "total_providers": 31,
@@ -1709,17 +1709,6 @@
       "free_quota": "Free tier + $10 topup → 1K RPD",
       "models": [
         {
-          "name": "DeepSeek: DeepSeek V4 Flash 0731 (free)",
-          "id": "deepseek/deepseek-v4-flash-0731:free",
-          "context": "1M",
-          "rate_limit": "See provider",
-          "info_url": "https://freellm.net/models/openrouter/deepseek-deepseek-v4-flash-0731/",
-          "modalities": [
-            "chat",
-            "text"
-          ]
-        },
-        {
           "name": "NVIDIA: Nemotron 3 Ultra (free)",
           "id": "nvidia/nemotron-3-ultra-550b-a55b:free",
           "context": "1M",
@@ -1736,6 +1725,17 @@
           "context": "262K",
           "rate_limit": "See provider",
           "info_url": "https://freellm.net/models/openrouter/poolside-laguna-s-2.1/",
+          "modalities": [
+            "chat",
+            "text"
+          ]
+        },
+        {
+          "name": "inclusionAI: Ling 3.0 Flash Fin (free)",
+          "id": "inclusionai/ling-3.0-flash-fin:free",
+          "context": "262K",
+          "rate_limit": "See provider",
+          "info_url": "https://freellm.net/models/openrouter/inclusionai-ling-3.0-flash-fin/",
           "modalities": [
             "chat",
             "text"
