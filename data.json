@@ -1,12 +1,12 @@
 {
-  "updated_at": "2026-09-19T06:05:20.303859+00:00",
+  "updated_at": "2026-09-20T10:19:27.820079+00:00",
   "source_repo": "open-free-llm-api/awesome-freellm-apis",
   "stats": {
     "total_providers": 31,
     "permanent_free_providers": 30,
     "renewable_providers": 1,
     "total_featured_models": 85,
-    "total_free_models_catalog": 490
+    "total_free_models_catalog": 509
   },
   "providers": [
     {
@@ -195,6 +195,126 @@
       ]
     },
     {
+      "id": "opencode-zen",
+      "name": "OpenCode Zen",
+      "tier_type": "permanent",
+      "tier_label": "Always Free",
+      "credit_model": null,
+      "base_url": "https://opencode.ai/zen/v1",
+      "signup_required": true,
+      "api_key_required": true,
+      "credit_card_required": false,
+      "verification_type": "Free registration required",
+      "docs_url": "https://opencode.ai/auth",
+      "signup_url": "https://opencode.ai/auth",
+      "total_free_models": 31,
+      "max_context": "1M",
+      "modalities": [
+        "audio",
+        "reasoning",
+        "vision"
+      ],
+      "free_quota": "See provider details",
+      "models": [
+        {
+          "name": "big-pickle",
+          "id": "big-pickle",
+          "context": "0",
+          "rate_limit": "Free tier",
+          "info_url": "https://freellm.net/models/opencode/big-pickle/",
+          "modalities": [
+            "chat",
+            "text"
+          ]
+        },
+        {
+          "name": "DeepSeek V4 Flash",
+          "id": "deepseek-v4-flash-free",
+          "context": "1M",
+          "rate_limit": "Free tier",
+          "info_url": "https://freellm.net/models/opencode/deepseek-v4-flash-free/",
+          "modalities": [
+            "chat",
+            "text"
+          ]
+        },
+        {
+          "name": "MiMo-V2.5",
+          "id": "mimo-v2.5-free",
+          "context": "1M",
+          "rate_limit": "Free tier",
+          "info_url": "https://freellm.net/models/opencode/mimo-v2-5-free/",
+          "modalities": [
+            "chat",
+            "text"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "llm7-io",
+      "name": "LLM7.io",
+      "tier_type": "permanent",
+      "tier_label": "Always Free",
+      "credit_model": null,
+      "base_url": "https://api.llm7.io/v1",
+      "signup_required": false,
+      "api_key_required": false,
+      "credit_card_required": false,
+      "verification_type": "None (anonymous access available)",
+      "docs_url": "https://token.llm7.io",
+      "signup_url": "https://token.llm7.io",
+      "total_free_models": 20,
+      "max_context": "1M",
+      "modalities": [
+        "chat",
+        "audio",
+        "code",
+        "image",
+        "pdf",
+        "reasoning",
+        "text",
+        "video",
+        "vision"
+      ],
+      "free_quota": "10 RPM, 60 req/hr (anon..",
+      "models": [
+        {
+          "name": "gpt-oss:20b",
+          "id": "gpt-oss-20b",
+          "context": "128K",
+          "rate_limit": "10 RPM, 60 req/hr (anon..",
+          "info_url": "https://freellm.net/models/llm7-io/gpt-oss-20b/",
+          "modalities": [
+            "chat",
+            "text"
+          ]
+        },
+        {
+          "name": "mistral-Nemo-Instruct-2407",
+          "id": "mistral-Nemo-Instruct-2407",
+          "context": "128K",
+          "rate_limit": "10 RPM, 60 req/hr (anon..",
+          "info_url": "https://freellm.net/models/llm7-io/mistral-nemo-instruct-2407/",
+          "modalities": [
+            "chat",
+            "text"
+          ]
+        },
+        {
+          "name": "minimax-m2.7",
+          "id": "minimax-m2.7",
+          "context": "180K",
+          "rate_limit": "10 RPM, 60 req/hr (anon..",
+          "info_url": "https://freellm.net/models/llm7-io/minimax-m2-7/",
+          "modalities": [
+            "chat",
+            "text"
+          ]
+        }
+      ]
+    },
+    {
       "id": "google-gemini",
       "name": "Google Gemini",
       "tier_type": "permanent",
@@ -249,69 +369,6 @@
           "context": "1M",
           "rate_limit": "15 RPM, 1,500 RPD",
           "info_url": "https://freellm.net/models/google-gemini/gemini-3-5-flash/",
-          "modalities": [
-            "chat",
-            "text"
-          ]
-        }
-      ]
-    },
-    {
-      "id": "llm7-io",
-      "name": "LLM7.io",
-      "tier_type": "permanent",
-      "tier_label": "Always Free",
-      "credit_model": null,
-      "base_url": "https://api.llm7.io/v1",
-      "signup_required": false,
-      "api_key_required": false,
-      "credit_card_required": false,
-      "verification_type": "None (anonymous access available)",
-      "docs_url": "https://token.llm7.io",
-      "signup_url": "https://token.llm7.io",
-      "total_free_models": 19,
-      "max_context": "1M",
-      "modalities": [
-        "chat",
-        "audio",
-        "code",
-        "image",
-        "pdf",
-        "reasoning",
-        "text",
-        "video",
-        "vision"
-      ],
-      "free_quota": "10 RPM, 60 req/hr (anon..",
-      "models": [
-        {
-          "name": "gpt-oss:20b",
-          "id": "gpt-oss-20b",
-          "context": "128K",
-          "rate_limit": "10 RPM, 60 req/hr (anon..",
-          "info_url": "https://freellm.net/models/llm7-io/gpt-oss-20b/",
-          "modalities": [
-            "chat",
-            "text"
-          ]
-        },
-        {
-          "name": "mistral-Nemo-Instruct-2407",
-          "id": "mistral-Nemo-Instruct-2407",
-          "context": "128K",
-          "rate_limit": "10 RPM, 60 req/hr (anon..",
-          "info_url": "https://freellm.net/models/llm7-io/mistral-nemo-instruct-2407/",
-          "modalities": [
-            "chat",
-            "text"
-          ]
-        },
-        {
-          "name": "minimax-m2.7",
-          "id": "minimax-m2.7",
-          "context": "180K",
-          "rate_limit": "10 RPM, 60 req/hr (anon..",
-          "info_url": "https://freellm.net/models/llm7-io/minimax-m2-7/",
           "modalities": [
             "chat",
             "text"
@@ -612,63 +669,6 @@
           "context": "131K",
           "rate_limit": "2 RPM (anonymous)",
           "info_url": "https://freellm.net/models/ovhcloud-ai-endpoints/qwen3-6-27b/",
-          "modalities": [
-            "chat",
-            "text"
-          ]
-        }
-      ]
-    },
-    {
-      "id": "opencode-zen",
-      "name": "OpenCode Zen",
-      "tier_type": "permanent",
-      "tier_label": "Always Free",
-      "credit_model": null,
-      "base_url": "https://opencode.ai/zen/v1",
-      "signup_required": true,
-      "api_key_required": true,
-      "credit_card_required": false,
-      "verification_type": "Free registration required",
-      "docs_url": "https://opencode.ai/auth",
-      "signup_url": "https://opencode.ai/auth",
-      "total_free_models": 13,
-      "max_context": "1M",
-      "modalities": [
-        "audio",
-        "reasoning",
-        "vision"
-      ],
-      "free_quota": "See provider details",
-      "models": [
-        {
-          "name": "big-pickle",
-          "id": "big-pickle",
-          "context": "0",
-          "rate_limit": "Free tier",
-          "info_url": "https://freellm.net/models/opencode/big-pickle/",
-          "modalities": [
-            "chat",
-            "text"
-          ]
-        },
-        {
-          "name": "DeepSeek V4 Flash",
-          "id": "deepseek-v4-flash-free",
-          "context": "1M",
-          "rate_limit": "Free tier",
-          "info_url": "https://freellm.net/models/opencode/deepseek-v4-flash-free/",
-          "modalities": [
-            "chat",
-            "text"
-          ]
-        },
-        {
-          "name": "MiMo-V2.5",
-          "id": "mimo-v2.5-free",
-          "context": "1M",
-          "rate_limit": "Free tier",
-          "info_url": "https://freellm.net/models/opencode/mimo-v2-5-free/",
           "modalities": [
             "chat",
             "text"
