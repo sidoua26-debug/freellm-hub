@@ -1,12 +1,12 @@
 {
-  "updated_at": "2026-09-20T10:19:27.820079+00:00",
+  "updated_at": "2026-09-21T11:30:40.013587+00:00",
   "source_repo": "open-free-llm-api/awesome-freellm-apis",
   "stats": {
     "total_providers": 31,
     "permanent_free_providers": 30,
     "renewable_providers": 1,
     "total_featured_models": 85,
-    "total_free_models_catalog": 509
+    "total_free_models_catalog": 508
   },
   "providers": [
     {
@@ -1692,7 +1692,7 @@
       "verification_type": "Registration (Free Tier)",
       "docs_url": "https://openrouter.ai/workspaces/default/keys",
       "signup_url": "https://openrouter.ai/workspaces/default/keys",
-      "total_free_models": 35,
+      "total_free_models": 34,
       "max_context": "1M",
       "modalities": [
         "chat",
