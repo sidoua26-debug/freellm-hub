@@ -1,12 +1,12 @@
 {
-  "updated_at": "2026-09-21T11:30:40.013587+00:00",
+  "updated_at": "2026-09-22T10:37:39.538436+00:00",
   "source_repo": "open-free-llm-api/awesome-freellm-apis",
   "stats": {
     "total_providers": 31,
     "permanent_free_providers": 30,
     "renewable_providers": 1,
     "total_featured_models": 85,
-    "total_free_models_catalog": 508
+    "total_free_models_catalog": 509
   },
   "providers": [
     {
@@ -22,7 +22,7 @@
       "verification_type": "Phone verification",
       "docs_url": "https://build.nvidia.com/settings/api-keys",
       "signup_url": "https://build.nvidia.com/settings/api-keys",
-      "total_free_models": 131,
+      "total_free_models": 132,
       "max_context": "1M",
       "modalities": [
         "chat",
@@ -895,7 +895,7 @@
         },
         {
           "name": "GLM-4.6V-Flash",
-          "id": "glm-4-6v-flash",
+          "id": "glm-4.6v-flash",
           "context": "128K",
           "rate_limit": "1 concurrent request",
           "info_url": "https://freellm.net/models/z-ai-zhipu-ai/glm-4-6v-flash/",
