@@ -1,12 +1,12 @@
 {
-  "updated_at": "2026-09-25T10:51:50.921486+00:00",
+  "updated_at": "2026-09-26T10:32:25.942572+00:00",
   "source_repo": "open-free-llm-api/awesome-freellm-apis",
   "stats": {
     "total_providers": 31,
     "permanent_free_providers": 30,
     "renewable_providers": 1,
     "total_featured_models": 85,
-    "total_free_models_catalog": 509
+    "total_free_models_catalog": 510
   },
   "providers": [
     {
@@ -50,22 +50,22 @@
           ]
         },
         {
-          "name": "z-ai/glm-5.3",
-          "id": "z-ai/glm-5.3",
+          "name": "z-ai/glm-5.3-flash",
+          "id": "z-ai/glm-5.3-flash",
           "context": "1M",
           "rate_limit": "Up to 40 RPM",
-          "info_url": "https://freellm.net/models/nvidia-nim/z-ai-glm-5-3/",
+          "info_url": "https://freellm.net/models/nvidia-nim/z-ai-glm-5-3-flash/",
           "modalities": [
             "chat",
             "text"
           ]
         },
         {
-          "name": "z-ai/glm-5.3-flash",
-          "id": "z-ai/glm-5.3-flash",
-          "context": "1M",
+          "name": "z-ai/glm-5.1",
+          "id": "z-ai/glm-5.1",
+          "context": "202K",
           "rate_limit": "Up to 40 RPM",
-          "info_url": "https://freellm.net/models/nvidia-nim/z-ai-glm-5-3-flash/",
+          "info_url": "https://freellm.net/models/nvidia-nim/z-ai-glm-5-1/",
           "modalities": [
             "chat",
             "text"
@@ -207,7 +207,7 @@
       "verification_type": "Free registration required",
       "docs_url": "https://opencode.ai/auth",
       "signup_url": "https://opencode.ai/auth",
-      "total_free_models": 31,
+      "total_free_models": 32,
       "max_context": "1M",
       "modalities": [
         "audio",
@@ -1023,6 +1023,62 @@
       ]
     },
     {
+      "id": "cline",
+      "name": "Cline",
+      "tier_type": "permanent",
+      "tier_label": "Always Free",
+      "credit_model": null,
+      "base_url": "",
+      "signup_required": true,
+      "api_key_required": true,
+      "credit_card_required": false,
+      "verification_type": "Free registration required",
+      "docs_url": "",
+      "signup_url": "",
+      "total_free_models": 6,
+      "max_context": "0",
+      "modalities": [
+        "chat",
+        "text"
+      ],
+      "free_quota": "See provider details",
+      "models": [
+        {
+          "name": "Muse Spark 1.3 Contributor",
+          "id": "cline-free/muse-spark-1.3-contributor",
+          "context": "0",
+          "rate_limit": "See provider",
+          "info_url": "https://freellm.net/models/cline/cline-free-muse-spark-1-3-contributor/",
+          "modalities": [
+            "chat",
+            "text"
+          ]
+        },
+        {
+          "name": "Deepseek-v4.1-Flash",
+          "id": "cline-free/deepseek-v4.1-flash",
+          "context": "0",
+          "rate_limit": "See provider",
+          "info_url": "https://freellm.net/models/cline/cline-free-deepseek-v4-1-flash/",
+          "modalities": [
+            "chat",
+            "text"
+          ]
+        },
+        {
+          "name": "Mimo V2.6 Flash",
+          "id": "cline-free/mimo-v2.6-flash",
+          "context": "0",
+          "rate_limit": "See provider",
+          "info_url": "https://freellm.net/models/cline/cline-free-mimo-v2-6-flash/",
+          "modalities": [
+            "chat",
+            "text"
+          ]
+        }
+      ]
+    },
+    {
       "id": "agnes-ai",
       "name": "Agnes AI",
       "tier_type": "permanent",
@@ -1138,62 +1194,6 @@
             "image",
             "text",
             "vision"
-          ]
-        }
-      ]
-    },
-    {
-      "id": "cline",
-      "name": "Cline",
-      "tier_type": "permanent",
-      "tier_label": "Always Free",
-      "credit_model": null,
-      "base_url": "",
-      "signup_required": true,
-      "api_key_required": true,
-      "credit_card_required": false,
-      "verification_type": "Free registration required",
-      "docs_url": "",
-      "signup_url": "",
-      "total_free_models": 5,
-      "max_context": "0",
-      "modalities": [
-        "chat",
-        "text"
-      ],
-      "free_quota": "See provider details",
-      "models": [
-        {
-          "name": "Muse Spark 1.3 Contributor",
-          "id": "cline-free/muse-spark-1.3-contributor",
-          "context": "0",
-          "rate_limit": "See provider",
-          "info_url": "https://freellm.net/models/cline/cline-free-muse-spark-1-3-contributor/",
-          "modalities": [
-            "chat",
-            "text"
-          ]
-        },
-        {
-          "name": "Deepseek-v4.1-Flash",
-          "id": "cline-free/deepseek-v4.1-flash",
-          "context": "0",
-          "rate_limit": "See provider",
-          "info_url": "https://freellm.net/models/cline/cline-free-deepseek-v4-1-flash/",
-          "modalities": [
-            "chat",
-            "text"
-          ]
-        },
-        {
-          "name": "Mimo V2.6 Flash",
-          "id": "cline-free/mimo-v2.6-flash",
-          "context": "0",
-          "rate_limit": "See provider",
-          "info_url": "https://freellm.net/models/cline/cline-free-mimo-v2-6-flash/",
-          "modalities": [
-            "chat",
-            "text"
           ]
         }
       ]
@@ -1692,7 +1692,7 @@
       "verification_type": "Registration (Free Tier)",
       "docs_url": "https://openrouter.ai/workspaces/default/keys",
       "signup_url": "https://openrouter.ai/workspaces/default/keys",
-      "total_free_models": 34,
+      "total_free_models": 33,
       "max_context": "1M",
       "modalities": [
         "chat",
@@ -1709,22 +1709,22 @@
       "free_quota": "Free tier + $10 topup → 1K RPD",
       "models": [
         {
-          "name": "NVIDIA: Nemotron 3 Ultra (free)",
-          "id": "nvidia/nemotron-3-ultra-550b-a55b:free",
+          "name": "Space Bunny Alpha",
+          "id": "stealth/space-bunny-alpha",
           "context": "1M",
           "rate_limit": "See provider",
-          "info_url": "https://freellm.net/models/openrouter/nvidia-nemotron-3-ultra-550b-a55b/",
+          "info_url": "https://freellm.net/models/openrouter/stealth-space-bunny-alpha/",
           "modalities": [
             "chat",
             "text"
           ]
         },
         {
-          "name": "Space Bunny Alpha",
-          "id": "stealth/space-bunny-alpha",
+          "name": "NVIDIA: Nemotron 3 Ultra (free)",
+          "id": "nvidia/nemotron-3-ultra-550b-a55b:free",
           "context": "1M",
           "rate_limit": "See provider",
-          "info_url": "https://freellm.net/models/openrouter/stealth-space-bunny-alpha/",
+          "info_url": "https://freellm.net/models/openrouter/nvidia-nemotron-3-ultra-550b-a55b/",
           "modalities": [
             "chat",
             "text"
