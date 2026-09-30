@@ -1,12 +1,12 @@
 {
-  "updated_at": "2026-09-29T11:50:42.074464+00:00",
+  "updated_at": "2026-09-30T11:37:16.981076+00:00",
   "source_repo": "open-free-llm-api/awesome-freellm-apis",
   "stats": {
-    "total_providers": 31,
-    "permanent_free_providers": 30,
+    "total_providers": 30,
+    "permanent_free_providers": 29,
     "renewable_providers": 1,
-    "total_featured_models": 85,
-    "total_free_models_catalog": 508
+    "total_featured_models": 82,
+    "total_free_models_catalog": 493
   },
   "providers": [
     {
@@ -50,22 +50,22 @@
           ]
         },
         {
-          "name": "z-ai/glm-5.3-flash",
-          "id": "z-ai/glm-5.3-flash",
-          "context": "1M",
+          "name": "moonshotai/kimi-k2.6",
+          "id": "moonshotai/kimi-k2.6",
+          "context": "262K",
           "rate_limit": "Up to 40 RPM",
-          "info_url": "https://freellm.net/models/nvidia-nim/z-ai-glm-5-3-flash/",
+          "info_url": "https://freellm.net/models/nvidia-nim/moonshotai-kimi-k2-6/",
           "modalities": [
             "chat",
             "text"
           ]
         },
         {
-          "name": "moonshotai/kimi-k2.6",
-          "id": "moonshotai/kimi-k2.6",
-          "context": "262K",
+          "name": "z-ai/glm-5.1",
+          "id": "z-ai/glm-5.1",
+          "context": "202K",
           "rate_limit": "Up to 40 RPM",
-          "info_url": "https://freellm.net/models/nvidia-nim/moonshotai-kimi-k2-6/",
+          "info_url": "https://freellm.net/models/nvidia-nim/z-ai-glm-5-1/",
           "modalities": [
             "chat",
             "text"
@@ -438,65 +438,6 @@
       ]
     },
     {
-      "id": "github-models",
-      "name": "GitHub Models",
-      "tier_type": "permanent",
-      "tier_label": "Always Free",
-      "credit_model": null,
-      "base_url": "https://models.github.ai/inference",
-      "signup_required": true,
-      "api_key_required": true,
-      "credit_card_required": false,
-      "verification_type": "Email only (no credit card)",
-      "docs_url": "https://github.com/marketplace/models",
-      "signup_url": "https://github.com/marketplace/models",
-      "total_free_models": 16,
-      "max_context": "1M",
-      "modalities": [
-        "chat",
-        "image",
-        "pdf",
-        "reasoning",
-        "text"
-      ],
-      "free_quota": "See provider details",
-      "models": [
-        {
-          "name": "Phi-4",
-          "id": "Phi-4",
-          "context": "131K",
-          "rate_limit": "See provider",
-          "info_url": "https://freellm.net/models/github-models/phi-4/",
-          "modalities": [
-            "chat",
-            "text"
-          ]
-        },
-        {
-          "name": "Mistral Large (24.11)",
-          "id": "Mistral-large-2411",
-          "context": "131K",
-          "rate_limit": "See provider",
-          "info_url": "https://freellm.net/models/github-models/mistral-large-2411/",
-          "modalities": [
-            "chat",
-            "text"
-          ]
-        },
-        {
-          "name": "AI21 Jamba 1.5 Large",
-          "id": "AI21-Jamba-1.5-Large",
-          "context": "256K",
-          "rate_limit": "See provider",
-          "info_url": "https://freellm.net/models/github-models/ai21-jamba-1-5-large/",
-          "modalities": [
-            "chat",
-            "text"
-          ]
-        }
-      ]
-    },
-    {
       "id": "mistral-ai",
       "name": "Mistral AI",
       "tier_type": "permanent",
@@ -848,6 +789,64 @@
       ]
     },
     {
+      "id": "hugging-face",
+      "name": "Hugging Face",
+      "tier_type": "permanent",
+      "tier_label": "Always Free",
+      "credit_model": null,
+      "base_url": "https://router.huggingface.co/v1",
+      "signup_required": true,
+      "api_key_required": true,
+      "credit_card_required": false,
+      "verification_type": "Email only (no credit card)",
+      "docs_url": "https://huggingface.co/settings/tokens",
+      "signup_url": "https://huggingface.co/settings/tokens",
+      "total_free_models": 9,
+      "max_context": "131K",
+      "modalities": [
+        "chat",
+        "code",
+        "image",
+        "text"
+      ],
+      "free_quota": "Credit-metered",
+      "models": [
+        {
+          "name": "Meta-Llama-3.1-8B-Instruct",
+          "id": "meta-llama-3-1-8b-instruct",
+          "context": "128K",
+          "rate_limit": "Credit-metered",
+          "info_url": "https://freellm.net/models/hugging-face/meta-llama-3-1-8b-instruct/",
+          "modalities": [
+            "chat",
+            "text"
+          ]
+        },
+        {
+          "name": "gemma-3-4b-it",
+          "id": "google/gemma-3-4b-it",
+          "context": "131K",
+          "rate_limit": "Credit-metered",
+          "info_url": "https://freellm.net/models/hugging-face/gemma-3-4b-it/",
+          "modalities": [
+            "chat",
+            "text"
+          ]
+        },
+        {
+          "name": "phi-4",
+          "id": "phi-4",
+          "context": "16K",
+          "rate_limit": "Credit-metered",
+          "info_url": "https://freellm.net/models/hugging-face/phi-4/",
+          "modalities": [
+            "chat",
+            "text"
+          ]
+        }
+      ]
+    },
+    {
       "id": "z-ai-zhipu-ai",
       "name": "Z AI (Zhipu AI)",
       "tier_type": "permanent",
@@ -901,65 +900,6 @@
           "info_url": "https://freellm.net/models/z-ai-zhipu-ai/glm-4-6v-flash/",
           "modalities": [
             "chat",
-            "text"
-          ]
-        }
-      ]
-    },
-    {
-      "id": "hugging-face",
-      "name": "Hugging Face",
-      "tier_type": "permanent",
-      "tier_label": "Always Free",
-      "credit_model": null,
-      "base_url": "https://router.huggingface.co/v1",
-      "signup_required": true,
-      "api_key_required": true,
-      "credit_card_required": false,
-      "verification_type": "Email only (no credit card)",
-      "docs_url": "https://huggingface.co/settings/tokens",
-      "signup_url": "https://huggingface.co/settings/tokens",
-      "total_free_models": 8,
-      "max_context": "131K",
-      "modalities": [
-        "chat",
-        "code",
-        "image",
-        "text"
-      ],
-      "free_quota": "Credit-metered",
-      "models": [
-        {
-          "name": "Meta-Llama-3.1-8B-Instruct",
-          "id": "meta-llama-3-1-8b-instruct",
-          "context": "128K",
-          "rate_limit": "Credit-metered",
-          "info_url": "https://freellm.net/models/hugging-face/meta-llama-3-1-8b-instruct/",
-          "modalities": [
-            "chat",
-            "text"
-          ]
-        },
-        {
-          "name": "gemma-3-4b-it",
-          "id": "google/gemma-3-4b-it",
-          "context": "131K",
-          "rate_limit": "Credit-metered",
-          "info_url": "https://freellm.net/models/hugging-face/gemma-3-4b-it/",
-          "modalities": [
-            "chat",
-            "text"
-          ]
-        },
-        {
-          "name": "Qwen2.5-Coder-7B-Instruct",
-          "id": "qwen2-5-coder-7b-instruct",
-          "context": "131K",
-          "rate_limit": "Credit-metered",
-          "info_url": "https://freellm.net/models/hugging-face/qwen2-5-coder-7b-instruct/",
-          "modalities": [
-            "chat",
-            "code",
             "text"
           ]
         }
