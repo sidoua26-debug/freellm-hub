@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-30T11:37:16.981076+00:00",
+  "updated_at": "2026-10-01T12:06:12.025726+00:00",
   "source_repo": "open-free-llm-api/awesome-freellm-apis",
   "stats": {
     "total_providers": 30,
@@ -303,7 +303,7 @@
         },
         {
           "name": "minimax-m2.7",
-          "id": "minimax-m2.7",
+          "id": "minimax-m2-7",
           "context": "180K",
           "rate_limit": "10 RPM, 60 req/hr (anon..",
           "info_url": "https://freellm.net/models/llm7-io/minimax-m2-7/",
@@ -1083,62 +1083,6 @@
       ]
     },
     {
-      "id": "cline",
-      "name": "Cline",
-      "tier_type": "permanent",
-      "tier_label": "Always Free",
-      "credit_model": null,
-      "base_url": "",
-      "signup_required": true,
-      "api_key_required": true,
-      "credit_card_required": false,
-      "verification_type": "Free registration required",
-      "docs_url": "",
-      "signup_url": "",
-      "total_free_models": 5,
-      "max_context": "0",
-      "modalities": [
-        "chat",
-        "text"
-      ],
-      "free_quota": "See provider details",
-      "models": [
-        {
-          "name": "Muse Spark 1.3 Contributor",
-          "id": "cline-free/muse-spark-1.3-contributor",
-          "context": "0",
-          "rate_limit": "See provider",
-          "info_url": "https://freellm.net/models/cline/cline-free-muse-spark-1-3-contributor/",
-          "modalities": [
-            "chat",
-            "text"
-          ]
-        },
-        {
-          "name": "Deepseek-v4.1-Flash",
-          "id": "cline-free/deepseek-v4.1-flash",
-          "context": "0",
-          "rate_limit": "See provider",
-          "info_url": "https://freellm.net/models/cline/cline-free-deepseek-v4-1-flash/",
-          "modalities": [
-            "chat",
-            "text"
-          ]
-        },
-        {
-          "name": "Mimo V2.6 Flash",
-          "id": "cline-free/mimo-v2.6-flash",
-          "context": "0",
-          "rate_limit": "See provider",
-          "info_url": "https://freellm.net/models/cline/cline-free-mimo-v2-6-flash/",
-          "modalities": [
-            "chat",
-            "text"
-          ]
-        }
-      ]
-    },
-    {
       "id": "sambanova",
       "name": "SambaNova",
       "tier_type": "permanent",
@@ -1189,6 +1133,62 @@
           "context": "128K",
           "rate_limit": "20 RPM, 20 RPD, 200K TPD",
           "info_url": "https://freellm.net/models/sambanova/minimax-m2-7/",
+          "modalities": [
+            "chat",
+            "text"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cline",
+      "name": "Cline",
+      "tier_type": "permanent",
+      "tier_label": "Always Free",
+      "credit_model": null,
+      "base_url": "",
+      "signup_required": true,
+      "api_key_required": true,
+      "credit_card_required": false,
+      "verification_type": "Free registration required",
+      "docs_url": "",
+      "signup_url": "",
+      "total_free_models": 4,
+      "max_context": "0",
+      "modalities": [
+        "chat",
+        "text"
+      ],
+      "free_quota": "See provider details",
+      "models": [
+        {
+          "name": "Muse Spark 1.3 Contributor",
+          "id": "cline-free/muse-spark-1.3-contributor",
+          "context": "0",
+          "rate_limit": "See provider",
+          "info_url": "https://freellm.net/models/cline/cline-free-muse-spark-1-3-contributor/",
+          "modalities": [
+            "chat",
+            "text"
+          ]
+        },
+        {
+          "name": "Deepseek-v4.1-Flash",
+          "id": "cline-free/deepseek-v4.1-flash",
+          "context": "0",
+          "rate_limit": "See provider",
+          "info_url": "https://freellm.net/models/cline/cline-free-deepseek-v4-1-flash/",
+          "modalities": [
+            "chat",
+            "text"
+          ]
+        },
+        {
+          "name": "Mimo V2.6 Flash",
+          "id": "cline-free/mimo-v2.6-flash",
+          "context": "0",
+          "rate_limit": "See provider",
+          "info_url": "https://freellm.net/models/cline/cline-free-mimo-v2-6-flash/",
           "modalities": [
             "chat",
             "text"
@@ -1632,7 +1632,7 @@
       "verification_type": "Registration (Free Tier)",
       "docs_url": "https://openrouter.ai/workspaces/default/keys",
       "signup_url": "https://openrouter.ai/workspaces/default/keys",
-      "total_free_models": 31,
+      "total_free_models": 32,
       "max_context": "1M",
       "modalities": [
         "chat",
