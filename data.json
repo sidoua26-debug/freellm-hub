@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-03T10:50:35.267766+00:00",
+  "updated_at": "2026-10-04T11:32:51.160970+00:00",
   "source_repo": "open-free-llm-api/awesome-freellm-apis",
   "stats": {
     "total_providers": 30,
@@ -50,22 +50,22 @@
           ]
         },
         {
-          "name": "moonshotai/kimi-k2.6",
-          "id": "moonshotai/kimi-k2.6",
-          "context": "262K",
+          "name": "z-ai/glm-5.1",
+          "id": "z-ai/glm-5.1",
+          "context": "202K",
           "rate_limit": "Up to 40 RPM",
-          "info_url": "https://freellm.net/models/nvidia-nim/moonshotai-kimi-k2-6/",
+          "info_url": "https://freellm.net/models/nvidia-nim/z-ai-glm-5-1/",
           "modalities": [
             "chat",
             "text"
           ]
         },
         {
-          "name": "z-ai/glm-5.1",
-          "id": "z-ai/glm-5.1",
-          "context": "202K",
+          "name": "poolside/laguna-xs-2.1",
+          "id": "poolside/laguna-xs-2.1",
+          "context": "262K",
           "rate_limit": "Up to 40 RPM",
-          "info_url": "https://freellm.net/models/nvidia-nim/z-ai-glm-5-1/",
+          "info_url": "https://freellm.net/models/nvidia-nim/poolside-laguna-xs-2-1/",
           "modalities": [
             "chat",
             "text"
