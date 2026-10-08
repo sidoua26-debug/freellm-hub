@@ -1,12 +1,12 @@
 {
-  "updated_at": "2026-10-07T12:21:03.736746+00:00",
+  "updated_at": "2026-10-08T12:30:26.696033+00:00",
   "source_repo": "open-free-llm-api/awesome-freellm-apis",
   "stats": {
     "total_providers": 30,
     "permanent_free_providers": 29,
     "renewable_providers": 1,
     "total_featured_models": 82,
-    "total_free_models_catalog": 501
+    "total_free_models_catalog": 505
   },
   "providers": [
     {
@@ -207,7 +207,7 @@
       "verification_type": "Free registration required",
       "docs_url": "https://opencode.ai/auth",
       "signup_url": "https://opencode.ai/auth",
-      "total_free_models": 33,
+      "total_free_models": 34,
       "max_context": "1M",
       "modalities": [
         "audio",
@@ -244,6 +244,69 @@
           "context": "1M",
           "rate_limit": "Free tier",
           "info_url": "https://freellm.net/models/opencode/mimo-v2-5-free/",
+          "modalities": [
+            "chat",
+            "text"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "llm7-io",
+      "name": "LLM7.io",
+      "tier_type": "permanent",
+      "tier_label": "Always Free",
+      "credit_model": null,
+      "base_url": "https://api.llm7.io/v1",
+      "signup_required": true,
+      "api_key_required": true,
+      "credit_card_required": false,
+      "verification_type": "Email only (no credit card)",
+      "docs_url": "https://token.llm7.io",
+      "signup_url": "https://token.llm7.io",
+      "total_free_models": 24,
+      "max_context": "1M",
+      "modalities": [
+        "chat",
+        "audio",
+        "code",
+        "image",
+        "pdf",
+        "reasoning",
+        "text",
+        "video",
+        "vision"
+      ],
+      "free_quota": "60 RPM, 250 req/hr (fre..",
+      "models": [
+        {
+          "name": "gpt-oss:20b",
+          "id": "gpt-oss-20b",
+          "context": "128K",
+          "rate_limit": "60 RPM, 250 req/hr (fre..",
+          "info_url": "https://freellm.net/models/llm7-io/gpt-oss-20b/",
+          "modalities": [
+            "chat",
+            "text"
+          ]
+        },
+        {
+          "name": "mistral-Nemo-Instruct-2407",
+          "id": "mistral-Nemo-Instruct-2407",
+          "context": "128K",
+          "rate_limit": "60 RPM, 250 req/hr (fre..",
+          "info_url": "https://freellm.net/models/llm7-io/mistral-nemo-instruct-2407/",
+          "modalities": [
+            "chat",
+            "text"
+          ]
+        },
+        {
+          "name": "minimax-m2.7",
+          "id": "minimax-m2.7",
+          "context": "180K",
+          "rate_limit": "60 RPM, 250 req/hr (fre..",
+          "info_url": "https://freellm.net/models/llm7-io/minimax-m2-7/",
           "modalities": [
             "chat",
             "text"
@@ -305,69 +368,6 @@
           "context": "262K",
           "rate_limit": "200 req/hr",
           "info_url": "https://freellm.net/models/kilo-code/nvidia-nemotron-3-super-120b-a12b-free/",
-          "modalities": [
-            "chat",
-            "text"
-          ]
-        }
-      ]
-    },
-    {
-      "id": "llm7-io",
-      "name": "LLM7.io",
-      "tier_type": "permanent",
-      "tier_label": "Always Free",
-      "credit_model": null,
-      "base_url": "https://api.llm7.io/v1",
-      "signup_required": true,
-      "api_key_required": true,
-      "credit_card_required": false,
-      "verification_type": "Email only (no credit card)",
-      "docs_url": "https://token.llm7.io",
-      "signup_url": "https://token.llm7.io",
-      "total_free_models": 21,
-      "max_context": "1M",
-      "modalities": [
-        "chat",
-        "audio",
-        "code",
-        "image",
-        "pdf",
-        "reasoning",
-        "text",
-        "video",
-        "vision"
-      ],
-      "free_quota": "60 RPM, 250 req/hr (fre..",
-      "models": [
-        {
-          "name": "gpt-oss:20b",
-          "id": "gpt-oss-20b",
-          "context": "128K",
-          "rate_limit": "60 RPM, 250 req/hr (fre..",
-          "info_url": "https://freellm.net/models/llm7-io/gpt-oss-20b/",
-          "modalities": [
-            "chat",
-            "text"
-          ]
-        },
-        {
-          "name": "mistral-Nemo-Instruct-2407",
-          "id": "mistral-Nemo-Instruct-2407",
-          "context": "128K",
-          "rate_limit": "60 RPM, 250 req/hr (fre..",
-          "info_url": "https://freellm.net/models/llm7-io/mistral-nemo-instruct-2407/",
-          "modalities": [
-            "chat",
-            "text"
-          ]
-        },
-        {
-          "name": "minimax-m2.7",
-          "id": "minimax-m2.7",
-          "context": "180K",
-          "rate_limit": "60 RPM, 250 req/hr (fre..",
-          "info_url": "https://freellm.net/models/llm7-io/minimax-m2-7/",
           "modalities": [
             "chat",
             "text"
