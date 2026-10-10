@@ -1,12 +1,12 @@
 {
-  "updated_at": "2026-10-09T12:19:11.770467+00:00",
+  "updated_at": "2026-10-10T11:37:20.773139+00:00",
   "source_repo": "open-free-llm-api/awesome-freellm-apis",
   "stats": {
     "total_providers": 30,
     "permanent_free_providers": 29,
     "renewable_providers": 1,
     "total_featured_models": 82,
-    "total_free_models_catalog": 505
+    "total_free_models_catalog": 506
   },
   "providers": [
     {
@@ -303,7 +303,7 @@
         },
         {
           "name": "minimax-m2.7",
-          "id": "minimax-m2.7",
+          "id": "minimax-m2-7",
           "context": "180K",
           "rate_limit": "60 RPM, 250 req/hr (fre..",
           "info_url": "https://freellm.net/models/llm7-io/minimax-m2-7/",
@@ -1083,6 +1083,64 @@
       ]
     },
     {
+      "id": "siliconflow",
+      "name": "SiliconFlow",
+      "tier_type": "permanent",
+      "tier_label": "Always Free",
+      "credit_model": null,
+      "base_url": "https://api.siliconflow.cn/v1",
+      "signup_required": true,
+      "api_key_required": true,
+      "credit_card_required": false,
+      "verification_type": "Free registration required",
+      "docs_url": "https://cloud.siliconflow.cn/account/ak",
+      "signup_url": "https://cloud.siliconflow.cn/account/ak",
+      "total_free_models": 4,
+      "max_context": "131K",
+      "modalities": [
+        "chat",
+        "reasoning",
+        "text"
+      ],
+      "free_quota": "1,000 RPM, 50,000 TPM",
+      "models": [
+        {
+          "name": "Qwen/Qwen3-8B",
+          "id": "Qwen/Qwen3-8B",
+          "context": "128K",
+          "rate_limit": "1,000 RPM, 50,000 TPM",
+          "info_url": "https://freellm.net/models/siliconflow/qwen-qwen3-8b/",
+          "modalities": [
+            "chat",
+            "text"
+          ]
+        },
+        {
+          "name": "Abbreviation",
+          "id": "abbreviation",
+          "context": "131K",
+          "rate_limit": "See provider",
+          "info_url": "https://freellm.net/models/siliconflow/abbreviation/",
+          "modalities": [
+            "chat",
+            "text"
+          ]
+        },
+        {
+          "name": "deepseek-ai/DeepSeek-R1-Distill-Qwen-7B",
+          "id": "deepseek-ai-deepseek-r1-distill-qwen-7b",
+          "context": "131K",
+          "rate_limit": "30 RPM, 60K TPM",
+          "info_url": "https://freellm.net/models/siliconflow/deepseek-ai-deepseek-r1-distill-qwen-7b/",
+          "modalities": [
+            "chat",
+            "reasoning",
+            "text"
+          ]
+        }
+      ]
+    },
+    {
       "id": "sambanova",
       "name": "SambaNova",
       "tier_type": "permanent",
@@ -1192,65 +1250,6 @@
           "modalities": [
             "chat",
             "text"
-          ]
-        }
-      ]
-    },
-    {
-      "id": "siliconflow",
-      "name": "SiliconFlow",
-      "tier_type": "permanent",
-      "tier_label": "Always Free",
-      "credit_model": null,
-      "base_url": "https://api.siliconflow.cn/v1",
-      "signup_required": true,
-      "api_key_required": true,
-      "credit_card_required": false,
-      "verification_type": "Free registration required",
-      "docs_url": "https://cloud.siliconflow.cn/account/ak",
-      "signup_url": "https://cloud.siliconflow.cn/account/ak",
-      "total_free_models": 3,
-      "max_context": "131K",
-      "modalities": [
-        "chat",
-        "text"
-      ],
-      "free_quota": "30 RPM, 60K TPM",
-      "models": [
-        {
-          "name": "Abbreviation",
-          "id": "abbreviation",
-          "context": "131K",
-          "rate_limit": "See provider",
-          "info_url": "https://freellm.net/models/siliconflow/abbreviation/",
-          "modalities": [
-            "chat",
-            "text"
-          ]
-        },
-        {
-          "name": "deepseek-ai/DeepSeek-R1-Distill-Qwen-7B",
-          "id": "deepseek-ai-deepseek-r1-distill-qwen-7b",
-          "context": "131K",
-          "rate_limit": "30 RPM, 60K TPM",
-          "info_url": "https://freellm.net/models/siliconflow/deepseek-ai-deepseek-r1-distill-qwen-7b/",
-          "modalities": [
-            "chat",
-            "reasoning",
-            "text"
-          ]
-        },
-        {
-          "name": "deepseek-ai/DeepSeek-OCR",
-          "id": "deepseek-ai-deepseek-ocr",
-          "context": "131K",
-          "rate_limit": "30 RPM, 60K TPM",
-          "info_url": "https://freellm.net/models/siliconflow/deepseek-ai-deepseek-ocr/",
-          "modalities": [
-            "chat",
-            "image",
-            "text",
-            "vision"
           ]
         }
       ]
