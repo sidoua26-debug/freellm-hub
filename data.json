@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-11T11:50:33.753714+00:00",
+  "updated_at": "2026-10-12T13:57:04.286992+00:00",
   "source_repo": "open-free-llm-api/awesome-freellm-apis",
   "stats": {
     "total_providers": 30,
@@ -39,6 +39,17 @@
       "free_quota": "Up to 40 RPM",
       "models": [
         {
+          "name": "z-ai/glm-5.3-flash",
+          "id": "z-ai/glm-5.3-flash",
+          "context": "1M",
+          "rate_limit": "Up to 40 RPM",
+          "info_url": "https://freellm.net/models/nvidia-nim/z-ai-glm-5-3-flash/",
+          "modalities": [
+            "chat",
+            "text"
+          ]
+        },
+        {
           "name": "z-ai/glm-5.2",
           "id": "z-ai/glm-5.2",
           "context": "1M",
@@ -55,17 +66,6 @@
           "context": "202K",
           "rate_limit": "Up to 40 RPM",
           "info_url": "https://freellm.net/models/nvidia-nim/z-ai-glm-5-1/",
-          "modalities": [
-            "chat",
-            "text"
-          ]
-        },
-        {
-          "name": "moonshotai/kimi-k2.6",
-          "id": "moonshotai/kimi-k2.6",
-          "context": "262K",
-          "rate_limit": "Up to 40 RPM",
-          "info_url": "https://freellm.net/models/nvidia-nim/moonshotai-kimi-k2-6/",
           "modalities": [
             "chat",
             "text"
