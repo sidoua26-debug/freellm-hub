@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-12T13:57:04.286992+00:00",
+  "updated_at": "2026-10-13T13:13:28.348849+00:00",
   "source_repo": "open-free-llm-api/awesome-freellm-apis",
   "stats": {
     "total_providers": 30,
@@ -517,6 +517,8 @@
         "chat",
         "code",
         "image",
+        "pdf",
+        "reasoning",
         "text"
       ],
       "free_quota": "~1 RPS, 500K TPM",
@@ -750,6 +752,7 @@
       "max_context": "131K",
       "modalities": [
         "chat",
+        "reasoning",
         "text"
       ],
       "free_quota": "15 RPM, 20K TPD",
@@ -1661,22 +1664,22 @@
           ]
         },
         {
-          "name": "Poolside: Laguna S 2.1 (free)",
-          "id": "poolside/laguna-s-2.1:free",
-          "context": "262K",
+          "name": "NVIDIA: Nemotron 3.5 Lightning (free)",
+          "id": "nvidia/nemotron-3.5-lightning:free",
+          "context": "1M",
           "rate_limit": "See provider",
-          "info_url": "https://freellm.net/models/openrouter/poolside-laguna-s-2.1/",
+          "info_url": "https://freellm.net/models/openrouter/nvidia-nemotron-3.5-lightning/",
           "modalities": [
             "chat",
             "text"
           ]
         },
         {
-          "name": "NVIDIA: Nemotron 3.5 Lightning (free)",
-          "id": "nvidia/nemotron-3.5-lightning:free",
-          "context": "1M",
+          "name": "Poolside: Laguna S 2.1 (free)",
+          "id": "poolside/laguna-s-2.1:free",
+          "context": "262K",
           "rate_limit": "See provider",
-          "info_url": "https://freellm.net/models/openrouter/nvidia-nemotron-3.5-lightning/",
+          "info_url": "https://freellm.net/models/openrouter/poolside-laguna-s-2.1/",
           "modalities": [
             "chat",
             "text"
