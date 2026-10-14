@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-13T13:13:28.348849+00:00",
+  "updated_at": "2026-10-14T10:53:30.751755+00:00",
   "source_repo": "open-free-llm-api/awesome-freellm-apis",
   "stats": {
     "total_providers": 30,
@@ -303,7 +303,7 @@
         },
         {
           "name": "minimax-m2.7",
-          "id": "minimax-m2-7",
+          "id": "minimax-m2.7",
           "context": "180K",
           "rate_limit": "60 RPM, 250 req/hr (fre..",
           "info_url": "https://freellm.net/models/llm7-io/minimax-m2-7/",
@@ -327,7 +327,7 @@
       "verification_type": "Email only (no credit card)",
       "docs_url": "https://app.kilo.ai/profile",
       "signup_url": "https://app.kilo.ai/profile",
-      "total_free_models": 22,
+      "total_free_models": 23,
       "max_context": "1M",
       "modalities": [
         "chat",
@@ -1635,7 +1635,7 @@
       "verification_type": "Registration (Free Tier)",
       "docs_url": "https://openrouter.ai/workspaces/default/keys",
       "signup_url": "https://openrouter.ai/workspaces/default/keys",
-      "total_free_models": 31,
+      "total_free_models": 30,
       "max_context": "1M",
       "modalities": [
         "chat",
