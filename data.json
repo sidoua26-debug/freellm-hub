@@ -1,12 +1,12 @@
 {
-  "updated_at": "2026-10-20T10:41:29.976848+00:00",
+  "updated_at": "2026-10-21T10:52:17.553920+00:00",
   "source_repo": "open-free-llm-api/awesome-freellm-apis",
   "stats": {
     "total_providers": 30,
     "permanent_free_providers": 29,
     "renewable_providers": 1,
     "total_featured_models": 82,
-    "total_free_models_catalog": 513
+    "total_free_models_catalog": 516
   },
   "providers": [
     {
@@ -22,7 +22,7 @@
       "verification_type": "Phone verification",
       "docs_url": "https://build.nvidia.com/settings/api-keys",
       "signup_url": "https://build.nvidia.com/settings/api-keys",
-      "total_free_models": 134,
+      "total_free_models": 136,
       "max_context": "1M",
       "modalities": [
         "chat",
@@ -61,11 +61,11 @@
           ]
         },
         {
-          "name": "poolside/laguna-xs-2.1",
-          "id": "poolside/laguna-xs-2.1",
+          "name": "moonshotai/kimi-k2.6",
+          "id": "moonshotai/kimi-k2.6",
           "context": "262K",
           "rate_limit": "Up to 40 RPM",
-          "info_url": "https://freellm.net/models/nvidia-nim/poolside-laguna-xs-2-1/",
+          "info_url": "https://freellm.net/models/nvidia-nim/moonshotai-kimi-k2-6/",
           "modalities": [
             "chat",
             "text"
@@ -90,7 +90,6 @@
       "max_context": "1M",
       "modalities": [
         "chat",
-        "audio",
         "image",
         "reasoning",
         "text",
@@ -575,7 +574,6 @@
       "max_context": "262K",
       "modalities": [
         "chat",
-        "audio",
         "code",
         "image",
         "reasoning",
@@ -967,6 +965,63 @@
       ]
     },
     {
+      "id": "cline",
+      "name": "Cline",
+      "tier_type": "permanent",
+      "tier_label": "Always Free",
+      "credit_model": null,
+      "base_url": "-",
+      "signup_required": true,
+      "api_key_required": true,
+      "credit_card_required": false,
+      "verification_type": "Free registration required",
+      "docs_url": "",
+      "signup_url": "",
+      "total_free_models": 6,
+      "max_context": "0",
+      "modalities": [
+        "chat",
+        "text",
+        "vision"
+      ],
+      "free_quota": "See provider details",
+      "models": [
+        {
+          "name": "Solar Mini 4",
+          "id": "cline-free/solar-mini4",
+          "context": "0",
+          "rate_limit": "See provider",
+          "info_url": "https://freellm.net/models/cline/cline-free-solar-mini4/",
+          "modalities": [
+            "chat",
+            "text"
+          ]
+        },
+        {
+          "name": "cline-free/nemotron-3.5-super-vl",
+          "id": "cline-free/nemotron-3.5-super-vl",
+          "context": "0",
+          "rate_limit": "See provider",
+          "info_url": "https://freellm.net/models/cline/cline-free-nemotron-3-5-super-vl/",
+          "modalities": [
+            "image",
+            "vision"
+          ]
+        },
+        {
+          "name": "Minimax M3.1 Flash",
+          "id": "cline-free/minimax-m3.1-flash",
+          "context": "0",
+          "rate_limit": "See provider",
+          "info_url": "https://freellm.net/models/cline/cline-free-minimax-m3-1-flash/",
+          "modalities": [
+            "chat",
+            "text"
+          ]
+        }
+      ]
+    },
+    {
       "id": "agnes-ai",
       "name": "Agnes AI",
       "tier_type": "permanent",
@@ -1082,63 +1137,6 @@
             "image",
             "text",
             "vision"
-          ]
-        }
-      ]
-    },
-    {
-      "id": "cline",
-      "name": "Cline",
-      "tier_type": "permanent",
-      "tier_label": "Always Free",
-      "credit_model": null,
-      "base_url": "",
-      "signup_required": true,
-      "api_key_required": true,
-      "credit_card_required": false,
-      "verification_type": "Free registration required",
-      "docs_url": "",
-      "signup_url": "",
-      "total_free_models": 5,
-      "max_context": "0",
-      "modalities": [
-        "chat",
-        "text",
-        "vision"
-      ],
-      "free_quota": "See provider details",
-      "models": [
-        {
-          "name": "Muse Spark 1.3 Contributor",
-          "id": "cline-free/muse-spark-1.3-contributor",
-          "context": "0",
-          "rate_limit": "See provider",
-          "info_url": "https://freellm.net/models/cline/cline-free-muse-spark-1-3-contributor/",
-          "modalities": [
-            "chat",
-            "text"
-          ]
-        },
-        {
-          "name": "Mimo V2.6 Flash",
-          "id": "cline-free/mimo-v2.6-flash",
-          "context": "0",
-          "rate_limit": "See provider",
-          "info_url": "https://freellm.net/models/cline/cline-free-mimo-v2-6-flash/",
-          "modalities": [
-            "chat",
-            "text"
-          ]
-        },
-        {
-          "name": "Solar Mini 4",
-          "id": "cline-free/solar-mini4",
-          "context": "0",
-          "rate_limit": "See provider",
-          "info_url": "https://freellm.net/models/cline/cline-free-solar-mini4/",
-          "modalities": [
-            "chat",
-            "text"
           ]
         }
       ]
@@ -1654,22 +1652,22 @@
       "free_quota": "Free tier + $10 topup → 1K RPD",
       "models": [
         {
-          "name": "NVIDIA: Nemotron 3 Ultra (free)",
-          "id": "nvidia/nemotron-3-ultra-550b-a55b:free",
+          "name": "MiniMax: MiniMax M3.1 Flash (free)",
+          "id": "minimax/minimax-m3.1-flash:free",
           "context": "1M",
           "rate_limit": "See provider",
-          "info_url": "https://freellm.net/models/openrouter/nvidia-nemotron-3-ultra-550b-a55b/",
+          "info_url": "https://freellm.net/models/openrouter/minimax-minimax-m3.1-flash/",
           "modalities": [
             "chat",
             "text"
           ]
         },
         {
-          "name": "MiniMax: MiniMax M3.1 Flash (free)",
-          "id": "minimax/minimax-m3.1-flash:free",
+          "name": "NVIDIA: Nemotron 3 Ultra (free)",
+          "id": "nvidia/nemotron-3-ultra-550b-a55b:free",
           "context": "1M",
           "rate_limit": "See provider",
-          "info_url": "https://freellm.net/models/openrouter/minimax-minimax-m3.1-flash/",
+          "info_url": "https://freellm.net/models/openrouter/nvidia-nemotron-3-ultra-550b-a55b/",
           "modalities": [
             "chat",
             "text"
