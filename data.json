@@ -1,12 +1,12 @@
 {
-  "updated_at": "2026-10-22T10:53:10.821955+00:00",
+  "updated_at": "2026-10-23T10:44:20.741741+00:00",
   "source_repo": "open-free-llm-api/awesome-freellm-apis",
   "stats": {
     "total_providers": 30,
     "permanent_free_providers": 29,
     "renewable_providers": 1,
     "total_featured_models": 82,
-    "total_free_models_catalog": 522
+    "total_free_models_catalog": 526
   },
   "providers": [
     {
@@ -22,7 +22,7 @@
       "verification_type": "Phone verification",
       "docs_url": "https://build.nvidia.com/settings/api-keys",
       "signup_url": "https://build.nvidia.com/settings/api-keys",
-      "total_free_models": 136,
+      "total_free_models": 137,
       "max_context": "1M",
       "modalities": [
         "chat",
@@ -146,7 +146,7 @@
       "verification_type": "Email only (no credit card)",
       "docs_url": "https://dash.cloudflare.com/profile/api-tokens",
       "signup_url": "https://dash.cloudflare.com/profile/api-tokens",
-      "total_free_models": 41,
+      "total_free_models": 46,
       "max_context": "262K",
       "modalities": [
         "chat",
@@ -965,63 +965,6 @@
       ]
     },
     {
-      "id": "cline",
-      "name": "Cline",
-      "tier_type": "permanent",
-      "tier_label": "Always Free",
-      "credit_model": null,
-      "base_url": "-",
-      "signup_required": true,
-      "api_key_required": true,
-      "credit_card_required": false,
-      "verification_type": "Free registration required",
-      "docs_url": "",
-      "signup_url": "",
-      "total_free_models": 6,
-      "max_context": "0",
-      "modalities": [
-        "chat",
-        "text",
-        "vision"
-      ],
-      "free_quota": "See provider details",
-      "models": [
-        {
-          "name": "Solar Mini 4",
-          "id": "cline-free/solar-mini4",
-          "context": "0",
-          "rate_limit": "See provider",
-          "info_url": "https://freellm.net/models/cline/cline-free-solar-mini4/",
-          "modalities": [
-            "chat",
-            "text"
-          ]
-        },
-        {
-          "name": "cline-free/nemotron-3.5-super-vl",
-          "id": "cline-free/nemotron-3.5-super-vl",
-          "context": "0",
-          "rate_limit": "See provider",
-          "info_url": "https://freellm.net/models/cline/cline-free-nemotron-3-5-super-vl/",
-          "modalities": [
-            "image",
-            "vision"
-          ]
-        },
-        {
-          "name": "Minimax M3.1 Flash",
-          "id": "cline-free/minimax-m3.1-flash",
-          "context": "0",
-          "rate_limit": "See provider",
-          "info_url": "https://freellm.net/models/cline/cline-free-minimax-m3-1-flash/",
-          "modalities": [
-            "chat",
-            "text"
-          ]
-        }
-      ]
-    },
-    {
       "id": "agnes-ai",
       "name": "Agnes AI",
       "tier_type": "permanent",
@@ -1137,6 +1080,63 @@
             "image",
             "text",
             "vision"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cline",
+      "name": "Cline",
+      "tier_type": "permanent",
+      "tier_label": "Always Free",
+      "credit_model": null,
+      "base_url": "-",
+      "signup_required": true,
+      "api_key_required": true,
+      "credit_card_required": false,
+      "verification_type": "Free registration required",
+      "docs_url": "",
+      "signup_url": "",
+      "total_free_models": 5,
+      "max_context": "0",
+      "modalities": [
+        "chat",
+        "text",
+        "vision"
+      ],
+      "free_quota": "See provider details",
+      "models": [
+        {
+          "name": "Solar Mini 4",
+          "id": "cline-free/solar-mini4",
+          "context": "0",
+          "rate_limit": "See provider",
+          "info_url": "https://freellm.net/models/cline/cline-free-solar-mini4/",
+          "modalities": [
+            "chat",
+            "text"
+          ]
+        },
+        {
+          "name": "cline-free/nemotron-3.5-super-vl",
+          "id": "cline-free/nemotron-3.5-super-vl",
+          "context": "0",
+          "rate_limit": "See provider",
+          "info_url": "https://freellm.net/models/cline/cline-free-nemotron-3-5-super-vl/",
+          "modalities": [
+            "image",
+            "vision"
+          ]
+        },
+        {
+          "name": "Beam",
+          "id": "reflection/beam-free",
+          "context": "0",
+          "rate_limit": "See provider",
+          "info_url": "https://freellm.net/models/cline/reflection-beam-free/",
+          "modalities": [
+            "chat",
+            "text"
           ]
         }
       ]
@@ -1634,7 +1634,7 @@
       "verification_type": "Registration (Free Tier)",
       "docs_url": "https://openrouter.ai/workspaces/default/keys",
       "signup_url": "https://openrouter.ai/workspaces/default/keys",
-      "total_free_models": 39,
+      "total_free_models": 38,
       "max_context": "1M",
       "modalities": [
         "chat",
@@ -1651,17 +1651,6 @@
       ],
       "free_quota": "Free tier + $10 topup → 1K RPD",
       "models": [
-        {
-          "name": "MiniMax: MiniMax M3.1 Flash (free)",
-          "id": "minimax/minimax-m3.1-flash:free",
-          "context": "1M",
-          "rate_limit": "See provider",
-          "info_url": "https://freellm.net/models/openrouter/minimax-minimax-m3.1-flash/",
-          "modalities": [
-            "chat",
-            "text"
-          ]
-        },
         {
           "name": "NVIDIA: Nemotron 3 Ultra (free)",
           "id": "nvidia/nemotron-3-ultra-550b-a55b:free",
@@ -1682,6 +1671,17 @@
           "modalities": [
             "image",
             "vision"
+          ]
+        },
+        {
+          "name": "Poolside: Laguna S 2.1 (free)",
+          "id": "poolside/laguna-s-2.1:free",
+          "context": "262K",
+          "rate_limit": "See provider",
+          "info_url": "https://freellm.net/models/openrouter/poolside-laguna-s-2.1/",
+          "modalities": [
+            "chat",
+            "text"
           ]
         }
       ]
