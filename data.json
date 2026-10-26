@@ -1,12 +1,12 @@
 {
-  "updated_at": "2026-10-25T10:26:06.384735+00:00",
+  "updated_at": "2026-10-26T11:55:11.547573+00:00",
   "source_repo": "open-free-llm-api/awesome-freellm-apis",
   "stats": {
     "total_providers": 31,
     "permanent_free_providers": 30,
     "renewable_providers": 1,
     "total_featured_models": 85,
-    "total_free_models_catalog": 536
+    "total_free_models_catalog": 537
   },
   "providers": [
     {
@@ -22,7 +22,7 @@
       "verification_type": "Phone verification",
       "docs_url": "https://build.nvidia.com/settings/api-keys",
       "signup_url": "https://build.nvidia.com/settings/api-keys",
-      "total_free_models": 137,
+      "total_free_models": 138,
       "max_context": "1M",
       "modalities": [
         "chat",
@@ -96,7 +96,7 @@
         "video",
         "vision"
       ],
-      "free_quota": "2,000 RPD total; <=500 ..",
+      "free_quota": "2,000 RPD total; &lt;=500..",
       "models": [
         {
           "name": "MiniMax-M2.5-highspeed",
@@ -113,7 +113,7 @@
           "name": "Qwen/Qwen3.5-35B-A3B",
           "id": "qwen-qwen3-5-35b-a3b",
           "context": "256K",
-          "rate_limit": "2,000 RPD total; <=500 ..",
+          "rate_limit": "2,000 RPD total; &lt;=500..",
           "info_url": "https://freellm.net/models/modelscope/qwen-qwen3-5-35b-a3b/",
           "modalities": [
             "chat",
@@ -124,7 +124,7 @@
           "name": "Qwen/Qwen3.5-27B",
           "id": "qwen-qwen3-5-27b",
           "context": "256K",
-          "rate_limit": "2,000 RPD total; <=500 ..",
+          "rate_limit": "2,000 RPD total; &lt;=500..",
           "info_url": "https://freellm.net/models/modelscope/qwen-qwen3-5-27b/",
           "modalities": [
             "chat",
@@ -213,13 +213,13 @@
         "reasoning",
         "vision"
       ],
-      "free_quota": "See provider details",
+      "free_quota": "-",
       "models": [
         {
           "name": "big-pickle",
           "id": "big-pickle",
           "context": "0",
-          "rate_limit": "Free tier",
+          "rate_limit": "-",
           "info_url": "https://freellm.net/models/opencode/big-pickle/",
           "modalities": [
             "chat",
@@ -230,7 +230,7 @@
           "name": "DeepSeek V4 Flash",
           "id": "deepseek-v4-flash-free",
           "context": "1M",
-          "rate_limit": "Free tier",
+          "rate_limit": "-",
           "info_url": "https://freellm.net/models/opencode/deepseek-v4-flash-free/",
           "modalities": [
             "chat",
@@ -241,7 +241,7 @@
           "name": "MiMo-V2.5",
           "id": "mimo-v2.5-free",
           "context": "1M",
-          "rate_limit": "Free tier",
+          "rate_limit": "-",
           "info_url": "https://freellm.net/models/opencode/mimo-v2-5-free/",
           "modalities": [
             "chat",
@@ -288,22 +288,22 @@
           ]
         },
         {
-          "name": "nvidia/nemotron-3-super-120b-a12b:free",
-          "id": "nvidia/nemotron-3-super-120b-a12b:free",
-          "context": "262K",
+          "name": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoni..",
+          "id": "nvidia/nemotron-3-nano-omni-30b-a3b-re..",
+          "context": "256K",
           "rate_limit": "200 req/hr",
-          "info_url": "https://freellm.net/models/kilo-code/nvidia-nemotron-3-super-120b-a12b-free/",
+          "info_url": "https://freellm.net/models/kilo-code/nvidia-nemotron-3-nano-omni-30b-a3b-reasoning-free/",
           "modalities": [
             "chat",
             "text"
           ]
         },
         {
-          "name": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoni..",
-          "id": "nvidia/nemotron-3-nano-omni-30b-a3b-re..",
-          "context": "256K",
+          "name": "poolside/laguna-s-2.1:free",
+          "id": "poolside/laguna-s-2.1:free",
+          "context": "262K",
           "rate_limit": "200 req/hr",
-          "info_url": "https://freellm.net/models/kilo-code/nvidia-nemotron-3-nano-omni-30b-a3b-reasoning-free/",
+          "info_url": "https://freellm.net/models/kilo-code/poolside-laguna-s-2-1-free/",
           "modalities": [
             "chat",
             "text"
@@ -337,13 +337,13 @@
         "video",
         "vision"
       ],
-      "free_quota": "60 RPM, 250 req/hr (fre..",
+      "free_quota": "60 RPM, 250 req/hr",
       "models": [
         {
           "name": "gpt-oss:20b",
           "id": "gpt-oss-20b",
           "context": "128K",
-          "rate_limit": "60 RPM, 250 req/hr (fre..",
+          "rate_limit": "60 RPM, 250 req/hr",
           "info_url": "https://freellm.net/models/llm7-io/gpt-oss-20b/",
           "modalities": [
             "chat",
@@ -354,7 +354,7 @@
           "name": "mistral-Nemo-Instruct-2407",
           "id": "mistral-Nemo-Instruct-2407",
           "context": "128K",
-          "rate_limit": "60 RPM, 250 req/hr (fre..",
+          "rate_limit": "60 RPM, 250 req/hr",
           "info_url": "https://freellm.net/models/llm7-io/mistral-nemo-instruct-2407/",
           "modalities": [
             "chat",
@@ -365,7 +365,7 @@
           "name": "minimax-m2.7",
           "id": "minimax-m2.7",
           "context": "180K",
-          "rate_limit": "60 RPM, 250 req/hr (fre..",
+          "rate_limit": "60 RPM, 250 req/hr",
           "info_url": "https://freellm.net/models/llm7-io/minimax-m2-7/",
           "modalities": [
             "chat",
@@ -399,13 +399,13 @@
         "video",
         "vision"
       ],
-      "free_quota": "—",
+      "free_quota": "-",
       "models": [
         {
           "name": "Gemini 3.8 Flash",
           "id": "gemini-3.8-flash",
           "context": "1M",
-          "rate_limit": "—",
+          "rate_limit": "-",
           "info_url": "https://freellm.net/models/google-gemini/gemini-3-8-flash/",
           "modalities": [
             "chat",
@@ -416,7 +416,7 @@
           "name": "Gemini 3.7 Flash",
           "id": "gemini-3.7-flash",
           "context": "1M",
-          "rate_limit": "—",
+          "rate_limit": "-",
           "info_url": "https://freellm.net/models/google-gemini/gemini-3-7-flash/",
           "modalities": [
             "chat",
@@ -460,36 +460,36 @@
         "video",
         "vision"
       ],
-      "free_quota": "Session/weekly limits (..",
+      "free_quota": "1 concurrent request, m..",
       "models": [
+        {
+          "name": "gpt-oss:120b",
+          "id": "gpt-oss:120b",
+          "context": "128K",
+          "rate_limit": "1 concurrent request, m..",
+          "info_url": "https://freellm.net/models/ollama-cloud/gpt-oss-120b/",
+          "modalities": [
+            "chat",
+            "text"
+          ]
+        },
+        {
+          "name": "nemotron-3-ultra",
+          "id": "nemotron-3-ultra",
+          "context": "262K",
+          "rate_limit": "1 concurrent request, m..",
+          "info_url": "https://freellm.net/models/ollama-cloud/nemotron-3-ultra/",
+          "modalities": [
+            "chat",
+            "text"
+          ]
+        },
         {
           "name": "deepseek-v4-pro",
           "id": "deepseek-v4-pro",
           "context": "1M",
-          "rate_limit": "Session/weekly limits (..",
+          "rate_limit": "Session/weekly limits",
           "info_url": "https://freellm.net/models/ollama-cloud/deepseek-v4-pro/",
-          "modalities": [
-            "chat",
-            "text"
-          ]
-        },
-        {
-          "name": "deepseek-v4-flash",
-          "id": "deepseek-v4-flash",
-          "context": "1M",
-          "rate_limit": "Session/weekly limits (..",
-          "info_url": "https://freellm.net/models/ollama-cloud/deepseek-v4-flash/",
-          "modalities": [
-            "chat",
-            "text"
-          ]
-        },
-        {
-          "name": "minimax-m3",
-          "id": "minimax-m3",
-          "context": "512K",
-          "rate_limit": "Session/weekly limits (..",
-          "info_url": "https://freellm.net/models/ollama-cloud/minimax-m3/",
           "modalities": [
             "chat",
             "text"
@@ -984,13 +984,13 @@
         "reasoning",
         "text"
       ],
-      "free_quota": "—",
+      "free_quota": "-",
       "models": [
         {
           "name": "tencent/Hunyuan-MT-7B",
           "id": "tencent-hunyuan-mt-7b",
           "context": "131K",
-          "rate_limit": "—",
+          "rate_limit": "-",
           "info_url": "https://freellm.net/models/siliconflow/tencent-hunyuan-mt-7b/",
           "modalities": [
             "chat",
@@ -1001,7 +1001,7 @@
           "name": "XingChenAGI/Xing4.0-29B",
           "id": "xingchenagi-xing4-0-29b",
           "context": "131K",
-          "rate_limit": "—",
+          "rate_limit": "-",
           "info_url": "https://freellm.net/models/siliconflow/xingchenagi-xing4-0-29b/",
           "modalities": [
             "chat",
@@ -1221,13 +1221,13 @@
         "text",
         "video"
       ],
-      "free_quota": "~1M tokens/month (share..",
+      "free_quota": "~1M tokens/mo",
       "models": [
         {
           "name": "MiniMaxAI/MiniMax-M2.7",
           "id": "minimaxai-minimax-m2-7",
           "context": "204K",
-          "rate_limit": "~1M tokens/month (share..",
+          "rate_limit": "~1M tokens/mo",
           "info_url": "https://freellm.net/models/gonka-broker/minimaxai-minimax-m2-7/",
           "modalities": [
             "chat",
@@ -1238,7 +1238,7 @@
           "name": "deepseek-ai/DeepSeek-V4-Flash-0731",
           "id": "deepseek-ai-deepseek-v4-flash-0731",
           "context": "400K",
-          "rate_limit": "~1M tokens/month (share..",
+          "rate_limit": "~1M tokens/mo",
           "info_url": "https://freellm.net/models/gonka-broker/deepseek-ai-deepseek-v4-flash-0731/",
           "modalities": [
             "chat",
@@ -1249,7 +1249,7 @@
           "name": "zai-org/GLM-5.3-Flash",
           "id": "zai-org-glm-5-3-flash",
           "context": "400K",
-          "rate_limit": "~1M tokens/month (share..",
+          "rate_limit": "~1M tokens/mo",
           "info_url": "https://freellm.net/models/gonka-broker/zai-org-glm-5-3-flash/",
           "modalities": [
             "chat",
@@ -1733,11 +1733,11 @@
           ]
         },
         {
-          "name": "Poolside: Laguna S 2.1 (free)",
-          "id": "poolside/laguna-s-2.1:free",
-          "context": "262K",
+          "name": "NVIDIA: Nemotron 3.5 Lightning (free)",
+          "id": "nvidia/nemotron-3.5-lightning:free",
+          "context": "1M",
           "rate_limit": "See provider",
-          "info_url": "https://freellm.net/models/openrouter/poolside-laguna-s-2.1/",
+          "info_url": "https://freellm.net/models/openrouter/nvidia-nemotron-3.5-lightning/",
           "modalities": [
             "chat",
             "text"
