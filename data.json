@@ -1,12 +1,12 @@
 {
-  "updated_at": "2026-11-07T12:08:37.506798+00:00",
+  "updated_at": "2026-11-08T12:29:17.708004+00:00",
   "source_repo": "open-free-llm-api/awesome-freellm-apis",
   "stats": {
     "total_providers": 31,
     "permanent_free_providers": 30,
     "renewable_providers": 1,
     "total_featured_models": 85,
-    "total_free_models_catalog": 539
+    "total_free_models_catalog": 537
   },
   "providers": [
     {
@@ -52,11 +52,11 @@
           ]
         },
         {
-          "name": "poolside/laguna-xs-2.1",
-          "id": "poolside/laguna-xs-2.1",
+          "name": "moonshotai/kimi-k2.6",
+          "id": "moonshotai/kimi-k2.6",
           "context": "262K",
           "rate_limit": "Up to 40 RPM",
-          "info_url": "https://freellm.net/models/nvidia-nim/poolside-laguna-xs-2-1/",
+          "info_url": "https://freellm.net/models/nvidia-nim/moonshotai-kimi-k2-6/",
           "modalities": [
             "chat",
             "text"
@@ -272,14 +272,13 @@
           ]
         },
         {
-          "name": "poolside/laguna-s-2.1:free",
-          "id": "poolside/laguna-s-2.1:free",
-          "context": "262K",
+          "name": "cohere/north-mini-code:free",
+          "id": "cohere/north-mini-code:free",
+          "context": "256K",
           "rate_limit": "200 req/hr",
-          "info_url": "https://freellm.net/models/kilo-code/poolside-laguna-s-2-1-free/",
+          "info_url": "https://freellm.net/models/kilo-code/cohere-north-mini-code-free/",
           "modalities": [
-            "chat",
-            "text"
+            "code"
           ]
         }
       ]
@@ -297,7 +296,7 @@
       "verification_type": "Email only (no credit card)",
       "docs_url": "https://token.llm7.io",
       "signup_url": "https://token.llm7.io",
-      "total_free_models": 26,
+      "total_free_models": 24,
       "max_context": "1M",
       "modalities": [
         "multimodal"
@@ -327,11 +326,11 @@
           ]
         },
         {
-          "name": "minimax-m2.7",
-          "id": "minimax-m2.7",
-          "context": "180K",
+          "name": "nemotron-3-nano:30b",
+          "id": "nemotron-3-nano-30b",
+          "context": "1M",
           "rate_limit": "60 RPM, 250 req/hr",
-          "info_url": "https://freellm.net/models/llm7-io/minimax-m2-7/",
+          "info_url": "https://freellm.net/models/llm7-io/nemotron-3-nano-30b/",
           "modalities": [
             "chat",
             "text"
@@ -345,7 +344,7 @@
       "tier_type": "permanent",
       "tier_label": "Always Free",
       "credit_model": null,
-      "base_url": "https://generativelanguage.googleapis.com/v1beta",
+      "base_url": "https://api.aionlabs.ai/v1",
       "signup_required": true,
       "api_key_required": true,
       "credit_card_required": false,
@@ -450,6 +449,61 @@
       ]
     },
     {
+      "id": "ovhcloud-ai-endpoints",
+      "name": "OVHcloud AI Endpoints",
+      "tier_type": "permanent",
+      "tier_label": "Always Free",
+      "credit_model": null,
+      "base_url": "https://oai.endpoints.kepler.ai.cloud.ovh.net/v1",
+      "signup_required": false,
+      "api_key_required": false,
+      "credit_card_required": false,
+      "verification_type": "None (anonymous access available)",
+      "docs_url": "https://www.ovhcloud.com/en/public-cloud/ai-endpoints/catalog/",
+      "signup_url": "https://www.ovhcloud.com/en/public-cloud/ai-endpoints/catalog/",
+      "total_free_models": 16,
+      "max_context": "262K",
+      "modalities": [
+        "multimodal"
+      ],
+      "free_quota": "2 RPM (anonymous)",
+      "models": [
+        {
+          "name": "Qwen3.5-397B-A17B",
+          "id": "qwen3.5-397b-a17b",
+          "context": "262K",
+          "rate_limit": "2 RPM (anonymous)",
+          "info_url": "https://freellm.net/models/ovhcloud-ai-endpoints/qwen3-5-397b-a17b/",
+          "modalities": [
+            "chat",
+            "text"
+          ]
+        },
+        {
+          "name": "gpt-oss-120b",
+          "id": "gpt-oss-120b",
+          "context": "131K",
+          "rate_limit": "2 RPM (anonymous)",
+          "info_url": "https://freellm.net/models/ovhcloud-ai-endpoints/gpt-oss-120b/",
+          "modalities": [
+            "chat",
+            "text"
+          ]
+        },
+        {
+          "name": "Meta-Llama-3_3-70B-Instruct",
+          "id": "meta-llama-3_3-70b-instruct",
+          "context": "131K",
+          "rate_limit": "2 RPM (anonymous)",
+          "info_url": "https://freellm.net/models/ovhcloud-ai-endpoints/meta-llama-3-3-70b-instruct/",
+          "modalities": [
+            "chat",
+            "text"
+          ]
+        }
+      ]
+    },
+    {
       "id": "mistral-ai",
       "name": "Mistral AI",
       "tier_type": "permanent",
@@ -497,61 +551,6 @@
           "context": "256K",
           "rate_limit": "~1 RPS, 500K TPM",
           "info_url": "https://freellm.net/models/mistral-ai/mistral-medium-3-5-128b/",
-          "modalities": [
-            "chat",
-            "text"
-          ]
-        }
-      ]
-    },
-    {
-      "id": "ovhcloud-ai-endpoints",
-      "name": "OVHcloud AI Endpoints",
-      "tier_type": "permanent",
-      "tier_label": "Always Free",
-      "credit_model": null,
-      "base_url": "https://oai.endpoints.kepler.ai.cloud.ovh.net/v1",
-      "signup_required": false,
-      "api_key_required": false,
-      "credit_card_required": false,
-      "verification_type": "None (anonymous access available)",
-      "docs_url": "https://www.ovhcloud.com/en/public-cloud/ai-endpoints/catalog/",
-      "signup_url": "https://www.ovhcloud.com/en/public-cloud/ai-endpoints/catalog/",
-      "total_free_models": 15,
-      "max_context": "262K",
-      "modalities": [
-        "multimodal"
-      ],
-      "free_quota": "2 RPM (anonymous)",
-      "models": [
-        {
-          "name": "Qwen3.5-397B-A17B",
-          "id": "qwen3.5-397b-a17b",
-          "context": "262K",
-          "rate_limit": "2 RPM (anonymous)",
-          "info_url": "https://freellm.net/models/ovhcloud-ai-endpoints/qwen3-5-397b-a17b/",
-          "modalities": [
-            "chat",
-            "text"
-          ]
-        },
-        {
-          "name": "Meta-Llama-3_3-70B-Instruct",
-          "id": "meta-llama-3_3-70b-instruct",
-          "context": "131K",
-          "rate_limit": "2 RPM (anonymous)",
-          "info_url": "https://freellm.net/models/ovhcloud-ai-endpoints/meta-llama-3-3-70b-instruct/",
-          "modalities": [
-            "chat",
-            "text"
-          ]
-        },
-        {
-          "name": "Qwen3.8-27B",
-          "id": "qwen3.8-27b",
-          "context": "262K",
-          "rate_limit": "2 RPM (anonymous)",
-          "info_url": "https://freellm.net/models/ovhcloud-ai-endpoints/qwen3-8-27b/",
           "modalities": [
             "chat",
             "text"
@@ -620,7 +619,7 @@
       "tier_type": "permanent",
       "tier_label": "Always Free",
       "credit_model": null,
-      "base_url": "https://api.cohere.com/v2",
+      "base_url": "https://api.aionlabs.ai/v1",
       "signup_required": true,
       "api_key_required": true,
       "credit_card_required": false,
@@ -1184,63 +1183,6 @@
       ]
     },
     {
-      "id": "cline",
-      "name": "Cline",
-      "tier_type": "permanent",
-      "tier_label": "Always Free",
-      "credit_model": null,
-      "base_url": "-",
-      "signup_required": true,
-      "api_key_required": true,
-      "credit_card_required": false,
-      "verification_type": "Free registration required",
-      "docs_url": "",
-      "signup_url": "",
-      "total_free_models": 4,
-      "max_context": "0",
-      "modalities": [
-        "chat",
-        "text",
-        "vision"
-      ],
-      "free_quota": "See provider details",
-      "models": [
-        {
-          "name": "Solar Mini 4",
-          "id": "cline-free/solar-mini4",
-          "context": "0",
-          "rate_limit": "See provider",
-          "info_url": "https://freellm.net/models/cline/cline-free-solar-mini4/",
-          "modalities": [
-            "chat",
-            "text"
-          ]
-        },
-        {
-          "name": "cline-free/nemotron-3.5-super-vl",
-          "id": "cline-free/nemotron-3.5-super-vl",
-          "context": "0",
-          "rate_limit": "See provider",
-          "info_url": "https://freellm.net/models/cline/cline-free-nemotron-3-5-super-vl/",
-          "modalities": [
-            "image",
-            "vision"
-          ]
-        },
-        {
-          "name": "Beam",
-          "id": "reflection/beam-free",
-          "context": "0",
-          "rate_limit": "See provider",
-          "info_url": "https://freellm.net/models/cline/reflection-beam-free/",
-          "modalities": [
-            "chat",
-            "text"
-          ]
-        }
-      ]
-    },
-    {
       "id": "xai",
       "name": "xAI",
       "tier_type": "permanent",
@@ -1289,6 +1231,63 @@
           "context": "131K",
           "rate_limit": "Credit-based",
           "info_url": "https://freellm.net/models/xai/grok-3-mini/",
+          "modalities": [
+            "chat",
+            "text"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cline",
+      "name": "Cline",
+      "tier_type": "permanent",
+      "tier_label": "Always Free",
+      "credit_model": null,
+      "base_url": "-",
+      "signup_required": true,
+      "api_key_required": true,
+      "credit_card_required": false,
+      "verification_type": "Free registration required",
+      "docs_url": "",
+      "signup_url": "",
+      "total_free_models": 3,
+      "max_context": "0",
+      "modalities": [
+        "chat",
+        "text",
+        "vision"
+      ],
+      "free_quota": "See provider details",
+      "models": [
+        {
+          "name": "Solar Mini 4",
+          "id": "cline-free/solar-mini4",
+          "context": "0",
+          "rate_limit": "See provider",
+          "info_url": "https://freellm.net/models/cline/cline-free-solar-mini4/",
+          "modalities": [
+            "chat",
+            "text"
+          ]
+        },
+        {
+          "name": "cline-free/nemotron-3.5-super-vl",
+          "id": "cline-free/nemotron-3.5-super-vl",
+          "context": "0",
+          "rate_limit": "See provider",
+          "info_url": "https://freellm.net/models/cline/cline-free-nemotron-3-5-super-vl/",
+          "modalities": [
+            "image",
+            "vision"
+          ]
+        },
+        {
+          "name": "Nemotron 3.5 Lightning",
+          "id": "nvidia/nemotron-3.5-lightning-free",
+          "context": "0",
+          "rate_limit": "See provider",
+          "info_url": "https://freellm.net/models/cline/nvidia-nemotron-3-5-lightning-free/",
           "modalities": [
             "chat",
             "text"
@@ -1625,6 +1624,17 @@
       "free_quota": "Free tier + $10 topup → 1K RPD",
       "models": [
         {
+          "name": "Crouton Alpha",
+          "id": "stealth/crouton-alpha",
+          "context": "1M",
+          "rate_limit": "See provider",
+          "info_url": "https://freellm.net/models/openrouter/stealth-crouton-alpha/",
+          "modalities": [
+            "chat",
+            "text"
+          ]
+        },
+        {
           "name": "NVIDIA: Nemotron 3 Ultra (free)",
           "id": "nvidia/nemotron-3-ultra-550b-a55b:free",
           "context": "1M",
@@ -1644,17 +1654,6 @@
           "modalities": [
             "image",
             "vision"
-          ]
-        },
-        {
-          "name": "NVIDIA: Nemotron 3.5 Lightning (free)",
-          "id": "nvidia/nemotron-3.5-lightning:free",
-          "context": "1M",
-          "rate_limit": "See provider",
-          "info_url": "https://freellm.net/models/openrouter/nvidia-nemotron-3.5-lightning/",
-          "modalities": [
-            "chat",
-            "text"
           ]
         }
       ]
