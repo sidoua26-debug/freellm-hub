@@ -1,12 +1,12 @@
 {
-  "updated_at": "2026-11-10T13:59:01.666509+00:00",
+  "updated_at": "2026-11-11T13:15:06.752274+00:00",
   "source_repo": "open-free-llm-api/awesome-freellm-apis",
   "stats": {
     "total_providers": 31,
     "permanent_free_providers": 30,
     "renewable_providers": 1,
     "total_featured_models": 85,
-    "total_free_models_catalog": 538
+    "total_free_models_catalog": 541
   },
   "providers": [
     {
@@ -504,6 +504,61 @@
       ]
     },
     {
+      "id": "groq",
+      "name": "Groq",
+      "tier_type": "permanent",
+      "tier_label": "Always Free",
+      "credit_model": null,
+      "base_url": "https://api.groq.com/openai/v1",
+      "signup_required": true,
+      "api_key_required": true,
+      "credit_card_required": false,
+      "verification_type": "Email only (no credit card)",
+      "docs_url": "https://console.groq.com/keys",
+      "signup_url": "https://console.groq.com/keys",
+      "total_free_models": 15,
+      "max_context": "262K",
+      "modalities": [
+        "multimodal"
+      ],
+      "free_quota": "30 RPM, 1,000 RPD",
+      "models": [
+        {
+          "name": "Moonshot Kimi K2",
+          "id": "moonshotai/kimi-k2-instruct",
+          "context": "131K",
+          "rate_limit": "See provider",
+          "info_url": "https://freellm.net/models/groq/moonshotai-kimi-k2-instruct/",
+          "modalities": [
+            "chat",
+            "text"
+          ]
+        },
+        {
+          "name": "Moonshot Kimi K2 0905",
+          "id": "moonshotai/kimi-k2-instruct-0905",
+          "context": "131K",
+          "rate_limit": "See provider",
+          "info_url": "https://freellm.net/models/groq/moonshotai-kimi-k2-instruct-0905/",
+          "modalities": [
+            "chat",
+            "text"
+          ]
+        },
+        {
+          "name": "qwen/qwen3.8-27b",
+          "id": "qwen/qwen3.8-27b",
+          "context": "131K",
+          "rate_limit": "30 RPM, 1,000 RPD",
+          "info_url": "https://freellm.net/models/groq/qwen-qwen3-8-27b/",
+          "modalities": [
+            "chat",
+            "text"
+          ]
+        }
+      ]
+    },
+    {
       "id": "mistral-ai",
       "name": "Mistral AI",
       "tier_type": "permanent",
@@ -551,61 +606,6 @@
           "context": "256K",
           "rate_limit": "~1 RPS, 500K TPM",
           "info_url": "https://freellm.net/models/mistral-ai/mistral-medium-3-5-128b/",
-          "modalities": [
-            "chat",
-            "text"
-          ]
-        }
-      ]
-    },
-    {
-      "id": "groq",
-      "name": "Groq",
-      "tier_type": "permanent",
-      "tier_label": "Always Free",
-      "credit_model": null,
-      "base_url": "https://api.groq.com/openai/v1",
-      "signup_required": true,
-      "api_key_required": true,
-      "credit_card_required": false,
-      "verification_type": "Email only (no credit card)",
-      "docs_url": "https://console.groq.com/keys",
-      "signup_url": "https://console.groq.com/keys",
-      "total_free_models": 12,
-      "max_context": "262K",
-      "modalities": [
-        "multimodal"
-      ],
-      "free_quota": "30 RPM, 250 RPD",
-      "models": [
-        {
-          "name": "Moonshot Kimi K2",
-          "id": "moonshotai/kimi-k2-instruct",
-          "context": "131K",
-          "rate_limit": "See provider",
-          "info_url": "https://freellm.net/models/groq/moonshotai-kimi-k2-instruct/",
-          "modalities": [
-            "chat",
-            "text"
-          ]
-        },
-        {
-          "name": "Moonshot Kimi K2 0905",
-          "id": "moonshotai/kimi-k2-instruct-0905",
-          "context": "131K",
-          "rate_limit": "See provider",
-          "info_url": "https://freellm.net/models/groq/moonshotai-kimi-k2-instruct-0905/",
-          "modalities": [
-            "chat",
-            "text"
-          ]
-        },
-        {
-          "name": "groq/compound",
-          "id": "groq/compound",
-          "context": "131K",
-          "rate_limit": "30 RPM, 250 RPD",
-          "info_url": "https://freellm.net/models/groq/groq-compound/",
           "modalities": [
             "chat",
             "text"
