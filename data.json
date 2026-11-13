@@ -1,12 +1,12 @@
 {
-  "updated_at": "2026-11-12T14:19:32.424136+00:00",
+  "updated_at": "2026-11-13T13:40:07.402298+00:00",
   "source_repo": "open-free-llm-api/awesome-freellm-apis",
   "stats": {
     "total_providers": 31,
     "permanent_free_providers": 30,
     "renewable_providers": 1,
     "total_featured_models": 85,
-    "total_free_models_catalog": 542
+    "total_free_models_catalog": 548
   },
   "providers": [
     {
@@ -132,7 +132,7 @@
       "verification_type": "Email only (no credit card)",
       "docs_url": "https://dash.cloudflare.com/profile/api-tokens",
       "signup_url": "https://dash.cloudflare.com/profile/api-tokens",
-      "total_free_models": 46,
+      "total_free_models": 47,
       "max_context": "262K",
       "modalities": [
         "multimodal"
@@ -343,14 +343,14 @@
       "tier_type": "permanent",
       "tier_label": "Always Free",
       "credit_model": null,
-      "base_url": "https://api.aionlabs.ai/v1",
+      "base_url": "https://generativelanguage.googleapis.com/v1beta",
       "signup_required": true,
       "api_key_required": true,
       "credit_card_required": false,
       "verification_type": "Email only (no credit card)",
       "docs_url": "https://aistudio.google.com/app/apikey",
       "signup_url": "https://aistudio.google.com/app/apikey",
-      "total_free_models": 19,
+      "total_free_models": 20,
       "max_context": "1M",
       "modalities": [
         "multimodal"
@@ -393,12 +393,67 @@
       ]
     },
     {
+      "id": "groq",
+      "name": "Groq",
+      "tier_type": "permanent",
+      "tier_label": "Always Free",
+      "credit_model": null,
+      "base_url": "https://api.groq.com/openai/v1",
+      "signup_required": true,
+      "api_key_required": true,
+      "credit_card_required": false,
+      "verification_type": "Email only (no credit card)",
+      "docs_url": "https://console.groq.com/keys",
+      "signup_url": "https://console.groq.com/keys",
+      "total_free_models": 18,
+      "max_context": "262K",
+      "modalities": [
+        "multimodal"
+      ],
+      "free_quota": "30 RPM, 1,000 RPD, 8,00..",
+      "models": [
+        {
+          "name": "Moonshot Kimi K2",
+          "id": "moonshotai/kimi-k2-instruct",
+          "context": "131K",
+          "rate_limit": "See provider",
+          "info_url": "https://freellm.net/models/groq/moonshotai-kimi-k2-instruct/",
+          "modalities": [
+            "chat",
+            "text"
+          ]
+        },
+        {
+          "name": "Moonshot Kimi K2 0905",
+          "id": "moonshotai/kimi-k2-instruct-0905",
+          "context": "131K",
+          "rate_limit": "See provider",
+          "info_url": "https://freellm.net/models/groq/moonshotai-kimi-k2-instruct-0905/",
+          "modalities": [
+            "chat",
+            "text"
+          ]
+        },
+        {
+          "name": "qwen/qwen3.8-27b",
+          "id": "qwen/qwen3.8-27b",
+          "context": "131K",
+          "rate_limit": "30 RPM, 1,000 RPD, 8,00..",
+          "info_url": "https://freellm.net/models/groq/qwen-qwen3-8-27b/",
+          "modalities": [
+            "chat",
+            "text"
+          ]
+        }
+      ]
+    },
+    {
       "id": "ollama-cloud",
       "name": "Ollama Cloud",
       "tier_type": "permanent",
       "tier_label": "Always Free",
       "credit_model": null,
-      "base_url": "https://ollama.com/api",
+      "base_url": "https://ollama.com/v1",
       "signup_required": true,
       "api_key_required": true,
       "credit_card_required": false,
@@ -503,61 +558,6 @@
       ]
     },
     {
-      "id": "groq",
-      "name": "Groq",
-      "tier_type": "permanent",
-      "tier_label": "Always Free",
-      "credit_model": null,
-      "base_url": "https://api.groq.com/openai/v1",
-      "signup_required": true,
-      "api_key_required": true,
-      "credit_card_required": false,
-      "verification_type": "Email only (no credit card)",
-      "docs_url": "https://console.groq.com/keys",
-      "signup_url": "https://console.groq.com/keys",
-      "total_free_models": 15,
-      "max_context": "262K",
-      "modalities": [
-        "multimodal"
-      ],
-      "free_quota": "30 RPM, 1,000 RPD, 8,00..",
-      "models": [
-        {
-          "name": "Moonshot Kimi K2",
-          "id": "moonshotai/kimi-k2-instruct",
-          "context": "131K",
-          "rate_limit": "See provider",
-          "info_url": "https://freellm.net/models/groq/moonshotai-kimi-k2-instruct/",
-          "modalities": [
-            "chat",
-            "text"
-          ]
-        },
-        {
-          "name": "Moonshot Kimi K2 0905",
-          "id": "moonshotai/kimi-k2-instruct-0905",
-          "context": "131K",
-          "rate_limit": "See provider",
-          "info_url": "https://freellm.net/models/groq/moonshotai-kimi-k2-instruct-0905/",
-          "modalities": [
-            "chat",
-            "text"
-          ]
-        },
-        {
-          "name": "qwen/qwen3.8-27b",
-          "id": "qwen/qwen3.8-27b",
-          "context": "131K",
-          "rate_limit": "30 RPM, 1,000 RPD, 8,00..",
-          "info_url": "https://freellm.net/models/groq/qwen-qwen3-8-27b/",
-          "modalities": [
-            "chat",
-            "text"
-          ]
-        }
-      ]
-    },
-    {
       "id": "mistral-ai",
       "name": "Mistral AI",
       "tier_type": "permanent",
@@ -618,7 +618,7 @@
       "tier_type": "permanent",
       "tier_label": "Always Free",
       "credit_model": null,
-      "base_url": "https://api.aionlabs.ai/v1",
+      "base_url": "https://api.cohere.com/v2",
       "signup_required": true,
       "api_key_required": true,
       "credit_card_required": false,
@@ -921,7 +921,7 @@
         {
           "name": "tencent/Hunyuan-MT-7B",
           "id": "tencent-hunyuan-mt-7b",
-          "context": "131K",
+          "context": "0",
           "rate_limit": "-",
           "info_url": "https://freellm.net/models/siliconflow/tencent-hunyuan-mt-7b/",
           "modalities": [
@@ -932,7 +932,7 @@
         {
           "name": "XingChenAGI/Xing4.0-29B",
           "id": "xingchenagi-xing4-0-29b",
-          "context": "131K",
+          "context": "0",
           "rate_limit": "-",
           "info_url": "https://freellm.net/models/siliconflow/xingchenagi-xing4-0-29b/",
           "modalities": [
@@ -1615,7 +1615,7 @@
       "verification_type": "Registration (Free Tier)",
       "docs_url": "https://openrouter.ai/workspaces/default/keys",
       "signup_url": "https://openrouter.ai/workspaces/default/keys",
-      "total_free_models": 38,
+      "total_free_models": 39,
       "max_context": "1M",
       "modalities": [
         "multimodal"
