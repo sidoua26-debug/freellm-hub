@@ -1,12 +1,12 @@
 {
-  "updated_at": "2026-11-18T14:49:59.092823+00:00",
+  "updated_at": "2026-11-19T14:56:25.736023+00:00",
   "source_repo": "open-free-llm-api/awesome-freellm-apis",
   "stats": {
     "total_providers": 22,
     "permanent_free_providers": 21,
     "renewable_providers": 1,
     "total_featured_models": 62,
-    "total_free_models_catalog": 311
+    "total_free_models_catalog": 312
   },
   "providers": [
     {
@@ -22,7 +22,7 @@
       "verification_type": "Phone verification",
       "docs_url": "https://build.nvidia.com/settings/api-keys",
       "signup_url": "https://build.nvidia.com/settings/api-keys",
-      "total_free_models": 81,
+      "total_free_models": 82,
       "max_context": "1M",
       "modalities": [
         "multimodal"
