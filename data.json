@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-23T16:53:55.895783+00:00",
+  "updated_at": "2026-11-24T16:44:17.589520+00:00",
   "source_repo": "open-free-llm-api/awesome-freellm-apis",
   "stats": {
     "total_providers": 23,
@@ -30,17 +30,6 @@
       "free_quota": "Up to 40 RPM",
       "models": [
         {
-          "name": "moonshotai/kimi-k3.1-pro",
-          "id": "moonshotai/kimi-k3.1-pro",
-          "context": "1M",
-          "rate_limit": "Up to 40 RPM",
-          "info_url": "https://freellm.net/models/nvidia-nim/moonshotai-kimi-k3-1-pro/",
-          "modalities": [
-            "chat",
-            "text"
-          ]
-        },
-        {
           "name": "z-ai/glm-5.3-flash",
           "id": "z-ai/glm-5.3-flash",
           "context": "1M",
@@ -57,6 +46,17 @@
           "context": "262K",
           "rate_limit": "Up to 40 RPM",
           "info_url": "https://freellm.net/models/nvidia-nim/poolside-laguna-xs-2-1/",
+          "modalities": [
+            "chat",
+            "text"
+          ]
+        },
+        {
+          "name": "moonshotai/kimi-k2.6",
+          "id": "moonshotai/kimi-k2.6",
+          "context": "262K",
+          "rate_limit": "Up to 40 RPM",
+          "info_url": "https://freellm.net/models/nvidia-nim/moonshotai-kimi-k2-6/",
           "modalities": [
             "chat",
             "text"
@@ -254,16 +254,6 @@
       "free_quota": "200 req/hr",
       "models": [
         {
-          "name": "cohere/north-mini-code:free",
-          "id": "cohere-north-mini-code-free",
-          "context": "256K",
-          "rate_limit": "200 req/hr",
-          "info_url": "https://freellm.net/models/kilo-code/cohere-north-mini-code-free/",
-          "modalities": [
-            "code"
-          ]
-        },
-        {
           "name": "dots-studio/dots-3-note-preview:free",
           "id": "dots-studio-dots-3-note-preview-free",
           "context": "512K",
@@ -280,6 +270,17 @@
           "context": "262K",
           "rate_limit": "200 req/hr",
           "info_url": "https://freellm.net/models/kilo-code/recursive-flint-v1-0-free/",
+          "modalities": [
+            "chat",
+            "text"
+          ]
+        },
+        {
+          "name": "xingchen-agi/xing4.0-29b-a4b:free",
+          "id": "xingchen-agi/xing4.0-29b-a4b:free",
+          "context": "262K",
+          "rate_limit": "200 req/hr",
+          "info_url": "https://freellm.net/models/kilo-code/xingchen-agi-xing4-0-29b-a4b-free/",
           "modalities": [
             "chat",
             "text"
@@ -862,6 +863,17 @@
       "free_quota": "See provider details",
       "models": [
         {
+          "name": "Crouton Alpha",
+          "id": "perch-ai/crouton-alpha",
+          "context": "0",
+          "rate_limit": "See provider",
+          "info_url": "https://freellm.net/models/perch-ai/perch-ai-crouton-alpha/",
+          "modalities": [
+            "chat",
+            "text"
+          ]
+        },
+        {
           "name": "DeepSeek V4.1 Flash 1017",
           "id": "perch-ai/deepseek-v4.1-flash-1017",
           "context": "0",
@@ -878,17 +890,6 @@
           "context": "0",
           "rate_limit": "See provider",
           "info_url": "https://freellm.net/models/perch-ai/perch-ai-glm-5-3-flash/",
-          "modalities": [
-            "chat",
-            "text"
-          ]
-        },
-        {
-          "name": "Crouton Alpha",
-          "id": "perch-ai/crouton-alpha",
-          "context": "0",
-          "rate_limit": "See provider",
-          "info_url": "https://freellm.net/models/perch-ai/perch-ai-crouton-alpha/",
           "modalities": [
             "chat",
             "text"
