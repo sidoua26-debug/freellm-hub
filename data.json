@@ -1,12 +1,12 @@
 {
-  "updated_at": "2026-11-24T16:44:17.589520+00:00",
+  "updated_at": "2026-11-25T16:30:21.242951+00:00",
   "source_repo": "open-free-llm-api/awesome-freellm-apis",
   "stats": {
     "total_providers": 23,
     "permanent_free_providers": 22,
     "renewable_providers": 1,
     "total_featured_models": 63,
-    "total_free_models_catalog": 289
+    "total_free_models_catalog": 294
   },
   "providers": [
     {
@@ -301,7 +301,7 @@
       "verification_type": "Email only (no credit card)",
       "docs_url": "https://aistudio.google.com/app/apikey",
       "signup_url": "https://aistudio.google.com/app/apikey",
-      "total_free_models": 12,
+      "total_free_models": 14,
       "max_context": "1M",
       "modalities": [
         "multimodal"
@@ -309,33 +309,31 @@
       "free_quota": "Varies by model and acc..",
       "models": [
         {
+          "name": "Gemini Embedding 001",
+          "id": "gemini-embedding-001",
+          "context": "2K",
+          "rate_limit": "Varies by model and acc..",
+          "info_url": "https://freellm.net/models/google-gemini/gemini-embedding-001/",
+          "modalities": [
+            "embeddings"
+          ]
+        },
+        {
+          "name": "Gemini Embedding 2",
+          "id": "gemini-embedding-2",
+          "context": "8K",
+          "rate_limit": "Varies by model and acc..",
+          "info_url": "https://freellm.net/models/google-gemini/gemini-embedding-2/",
+          "modalities": [
+            "embeddings"
+          ]
+        },
+        {
           "name": "Gemini 4 Hydrogen",
           "id": "gemini-4-hydrogen",
           "context": "1M",
           "rate_limit": "Varies by model and acc..",
           "info_url": "https://freellm.net/models/google-gemini/gemini-4-hydrogen/",
-          "modalities": [
-            "chat",
-            "text"
-          ]
-        },
-        {
-          "name": "Gemini 3.8 Flash",
-          "id": "gemini-3.8-flash",
-          "context": "1M",
-          "rate_limit": "-",
-          "info_url": "https://freellm.net/models/google-gemini/gemini-3-8-flash/",
-          "modalities": [
-            "chat",
-            "text"
-          ]
-        },
-        {
-          "name": "Gemini 3.7 Flash",
-          "id": "gemini-3.7-flash",
-          "context": "1M",
-          "rate_limit": "-",
-          "info_url": "https://freellm.net/models/google-gemini/gemini-3-7-flash/",
           "modalities": [
             "chat",
             "text"
@@ -510,6 +508,61 @@
       ]
     },
     {
+      "id": "groq",
+      "name": "Groq",
+      "tier_type": "permanent",
+      "tier_label": "Always Free",
+      "credit_model": null,
+      "base_url": "https://api.groq.com/openai/v1",
+      "signup_required": true,
+      "api_key_required": true,
+      "credit_card_required": false,
+      "verification_type": "Email only (no credit card)",
+      "docs_url": "https://console.groq.com/keys",
+      "signup_url": "https://console.groq.com/keys",
+      "total_free_models": 9,
+      "max_context": "131K",
+      "modalities": [
+        "multimodal"
+      ],
+      "free_quota": "-",
+      "models": [
+        {
+          "name": "GPT OSS Safeguard 20B",
+          "id": "openai/gpt-oss-safeguard-20b",
+          "context": "131K",
+          "rate_limit": "-",
+          "info_url": "https://freellm.net/models/groq/openai%2Fgpt-oss-safeguard-20b/",
+          "modalities": [
+            "chat",
+            "text"
+          ]
+        },
+        {
+          "name": "GPT OSS 20B",
+          "id": "openai/gpt-oss-20b",
+          "context": "131K",
+          "rate_limit": "-",
+          "info_url": "https://freellm.net/models/groq/openai%2Fgpt-oss-20b/",
+          "modalities": [
+            "chat",
+            "text"
+          ]
+        },
+        {
+          "name": "GPT OSS 120B",
+          "id": "openai/gpt-oss-120b",
+          "context": "131K",
+          "rate_limit": "-",
+          "info_url": "https://freellm.net/models/groq/openai%2Fgpt-oss-120b/",
+          "modalities": [
+            "chat",
+            "text"
+          ]
+        }
+      ]
+    },
+    {
       "id": "ovhcloud-ai-endpoints",
       "name": "OVHcloud AI Endpoints",
       "tier_type": "permanent",
@@ -612,61 +665,6 @@
           "context": "256K",
           "rate_limit": "Dynamic (30 RPM)",
           "info_url": "https://freellm.net/models/agnes-ai/agnes-2.5-flash/",
-          "modalities": [
-            "chat",
-            "text"
-          ]
-        }
-      ]
-    },
-    {
-      "id": "groq",
-      "name": "Groq",
-      "tier_type": "permanent",
-      "tier_label": "Always Free",
-      "credit_model": null,
-      "base_url": "https://api.groq.com/openai/v1",
-      "signup_required": true,
-      "api_key_required": true,
-      "credit_card_required": false,
-      "verification_type": "Email only (no credit card)",
-      "docs_url": "https://console.groq.com/keys",
-      "signup_url": "https://console.groq.com/keys",
-      "total_free_models": 6,
-      "max_context": "131K",
-      "modalities": [
-        "multimodal"
-      ],
-      "free_quota": "-",
-      "models": [
-        {
-          "name": "meta-llama/llama-prompt-guard-2-22m",
-          "id": "meta-llama/llama-prompt-guard-2-22m",
-          "context": "8K",
-          "rate_limit": "-",
-          "info_url": "https://freellm.net/models/groq/meta-llama%2Fllama-prompt-guard-2-22m/",
-          "modalities": [
-            "chat",
-            "text"
-          ]
-        },
-        {
-          "name": "meta-llama/llama-prompt-guard-2-86m",
-          "id": "meta-llama/llama-prompt-guard-2-86m",
-          "context": "8K",
-          "rate_limit": "-",
-          "info_url": "https://freellm.net/models/groq/meta-llama%2Fllama-prompt-guard-2-86m/",
-          "modalities": [
-            "chat",
-            "text"
-          ]
-        },
-        {
-          "name": "qwen/qwen3.8-27b",
-          "id": "qwen/qwen3.8-27b",
-          "context": "131K",
-          "rate_limit": "30 RPM, 1,000 RPD, 8,00..",
-          "info_url": "https://freellm.net/models/groq/qwen-qwen3-8-27b/",
           "modalities": [
             "chat",
             "text"
