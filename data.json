@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-26T16:03:26.996215+00:00",
+  "updated_at": "2026-11-27T15:51:42.185637+00:00",
   "source_repo": "open-free-llm-api/awesome-freellm-apis",
   "stats": {
     "total_providers": 23,
@@ -41,22 +41,22 @@
           ]
         },
         {
-          "name": "moonshotai/kimi-k3.1-pro",
-          "id": "moonshotai/kimi-k3.1-pro",
-          "context": "1M",
+          "name": "poolside/laguna-xs-2.1",
+          "id": "poolside/laguna-xs-2.1",
+          "context": "262K",
           "rate_limit": "Up to 40 RPM",
-          "info_url": "https://freellm.net/models/nvidia-nim/moonshotai-kimi-k3-1-pro/",
+          "info_url": "https://freellm.net/models/nvidia-nim/poolside-laguna-xs-2-1/",
           "modalities": [
             "chat",
             "text"
           ]
         },
         {
-          "name": "poolside/laguna-xs-2.1",
-          "id": "poolside/laguna-xs-2.1",
+          "name": "moonshotai/kimi-k2.6",
+          "id": "moonshotai/kimi-k2.6",
           "context": "262K",
           "rate_limit": "Up to 40 RPM",
-          "info_url": "https://freellm.net/models/nvidia-nim/poolside-laguna-xs-2-1/",
+          "info_url": "https://freellm.net/models/nvidia-nim/moonshotai-kimi-k2-6/",
           "modalities": [
             "chat",
             "text"
@@ -1190,22 +1190,22 @@
       "free_quota": "Free tier + $10 topup → 1K RPD",
       "models": [
         {
-          "name": "Crouton Alpha",
-          "id": "stealth/crouton-alpha",
+          "name": "NVIDIA: Nemotron 3 Ultra (free)",
+          "id": "nvidia/nemotron-3-ultra-550b-a55b:free",
           "context": "1M",
           "rate_limit": "See provider",
-          "info_url": "https://freellm.net/models/openrouter/stealth-crouton-alpha/",
+          "info_url": "https://freellm.net/models/openrouter/nvidia-nemotron-3-ultra-550b-a55b/",
           "modalities": [
             "chat",
             "text"
           ]
         },
         {
-          "name": "NVIDIA: Nemotron 3 Ultra (free)",
-          "id": "nvidia/nemotron-3-ultra-550b-a55b:free",
+          "name": "Crouton Alpha",
+          "id": "stealth/crouton-alpha",
           "context": "1M",
           "rate_limit": "See provider",
-          "info_url": "https://freellm.net/models/openrouter/nvidia-nemotron-3-ultra-550b-a55b/",
+          "info_url": "https://freellm.net/models/openrouter/stealth-crouton-alpha/",
           "modalities": [
             "chat",
             "text"
